@@ -68,7 +68,7 @@ __Premlinary Planning__
    - [ ]  
  2. Nav Bar 
    - [ ] Logo (Left)
-   - [ ] Links- Home, Play & Explore (Attractions), Eat (Food/Restaurants), Experience (Events- goal), Playgroups (Board) (Left)
+   - [ ] Links- Home, Play & Explore (Attractions), Eat (Food/Restaurants), Experience (Events- goal), Playroom (Board) (Left)
    - [ ] User Photo, User Name, Message Bubble (chat icon), Notifications Bubble (notifications icon) Recommendations(reviews) (Right)
    - [ ] Search bar (Right) 
 
@@ -80,7 +80,8 @@ __Wireframe__
 
 __Final__
 
-![Logo](url)
+![Logo](https://i.imgur.com/U6DjOsn.png)
+
 ![DemoImage](url)
 
 ![DemoImage](url)
