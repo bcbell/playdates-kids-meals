@@ -1,9 +1,17 @@
-body {
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: gray;
-  margin: 0;
+body.homePage {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(https://i.imgur.com/yjgdboN.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin: 0; */
 }
 
 nav {
   background-color: white;
+}
+footer{
+  font-family: 'Architects Daughter', cursive;
+  color: white;
+  font-size: 25px;
+  text-align: center;
 }

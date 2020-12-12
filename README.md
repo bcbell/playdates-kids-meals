@@ -80,7 +80,7 @@ __Wireframe__
 
 __Final__
 
-![Logo](https://i.imgur.com/U6DjOsn.png)
+![Logo](https://i.imgur.com/OWSASHX.png)
 
 ![DemoImage](url)
 
