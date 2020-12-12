@@ -1,17 +1,56 @@
-body.homePage {
-  font-family: 'Poppins', sans-serif;
-  background-image: url(https://i.imgur.com/yjgdboN.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* margin: 0; */
-}
-
-nav {
+nav.headerLinks {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Architects Daughter', cursive;
+  font-variant-caps: small-caps ;
+  font-size: 20px;
+  list-style-type: none;
   background-color: white;
+}
+ul.navbar{
+  list-style-type: none;
+}
+img.logout{
+  display: flex;
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  text-align: left;
+  border: solid 2px white;
+}
+img.login{
+  display: flex;
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  text-align: left;
+  border: solid 2px white;
 }
 footer{
   font-family: 'Architects Daughter', cursive;
-  color: white;
+  color: #080808;
   font-size: 25px;
   text-align: center;
+  font-variant-caps: small-caps ;
+}
+/* Home Page */
+body.homePage {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(https://i.imgur.com/vFggTE0.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  font-variant-caps: small-caps ;
+}
+
+button.kidsfoodHP{
+  background-image: url(https://i.imgur.com/0QB7W8L.png);
+  height: 300px;
+  width: 300px;
+}
+button.ballpitHP{
+  background-image: url(https://i.imgur.com/yjgdboN.png);
+  height: 300px;
+  width: 200px;
 }

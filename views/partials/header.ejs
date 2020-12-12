@@ -17,15 +17,34 @@
   </head>
   <body>
     <nav>
-      <ul>
+      <ul class="navbar">
         <% if (user) { %>
         <li>
-          <a class="google" href="/auth/logout">Bye, bye <%= user ? user.name : "Friend" %>,Logout</a>
+          <a class="google" href="/auth/logout"><img class="logout" src="https://i.imgur.com/SYX8qpu.png"></a>
         </li>
         <% } else { %>
         <li>
-          <a class="google" href="/auth/google">Welcome <%= user ? user.name : "Friend" %>, please sign in with Google</a>
+          <a class="google" href="/auth/google"><img class= "login" src="https://i.imgur.com/pFhNdoN.png"></a>
         </li>
         <% } %>
+        
+     </nav>
+     <nav class="headerLinks">
+      <li>
+        <a class='headerLinks' href="/">Home</a>
+      </li>
+       
+        <li>
+          <a class="headerLinks"  href="/eat">Eat</a>
+        </li>
+         <li>
+            <a class='headerLinks' href="/play">Play & Explore</a>
+        </li>
+        <li>
+          <a class='headerLinks' href="/experience">Experience</a>
+      </li>
+      <li>
+        <a class='headerLinks' href="/board">Q & A Board</a>
+    </li>
       </ul>
     </nav>

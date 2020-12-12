@@ -64,11 +64,11 @@ __Premlinary Planning__
  1. CSS and HTML
    - [  ] Fonts- Poppins Light & Architects Daughter
    - [ ]  Colors- Light blue (#38b6ff), Bright red (#ff1616), green(#578e44), grey (#607d8b), turquoise blue (#5ce1e6), black( #000000)
-   - [ ]  Background Image ![Image]()
+   - [ ]  Background Image ![Image](https://i.imgur.com/yjgdboN.png)
    - [ ]  
  2. Nav Bar 
-   - [ ] Logo (Left)
-   - [ ] Links- Home, Play & Explore (Attractions), Eat (Food/Restaurants), Experience (Events- goal), Playroom (Board) (Left)
+   - [x ] Logo (Left)
+   - [x ] Links- Home, Play & Explore (Attractions), Eat (Food/Restaurants), Experience (Events- goal), Playroom (Board) (Left)
    - [ ] User Photo, User Name, Message Bubble (chat icon), Notifications Bubble (notifications icon) Recommendations(reviews) (Right)
    - [ ] Search bar (Right) 
 
