@@ -43,7 +43,6 @@ footer{
   text-align: center;
   font-variant-caps: small-caps ;
 }
-
 /* Home Page */
 body.homePage {
   font-family: 'Poppins', sans-serif;
@@ -58,4 +57,7 @@ body.homePage {
   right: 0;
   min-width: 100%;
   min-height: 100%;
+}
+div.card-deck button{
+  font-variant-caps: small-caps ;
 }
