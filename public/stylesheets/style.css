@@ -61,3 +61,12 @@ body.homePage {
 div.card-deck button{
   font-variant-caps: small-caps ;
 }
+/* Account Settings Page */
+body.accountPage {
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  background-color:  #38b6ff;
+  font-variant-caps: small-caps ;
+}

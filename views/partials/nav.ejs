@@ -13,11 +13,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/img/android-chrome-192x192.png">
     <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="icon" href="/img/favicon.ico" > <title> <%= title %></title>
+    <link rel="icon" href="/img/favicon.ico" > <title><%= title%></title>
   </head>
   <body>
     <header> 
-      <% if (user) { %> <!---Logged In-->
       <div class="header">
        <a href="/"><img src="https://i.imgur.com/vUf3YwH.png"></a>
         <div class="headingText">
@@ -51,43 +50,3 @@
            </div>
          </div>
         
-        <% } else { %> <!---Logged Out-->
-          <div class="header">
-            <a href="/"><img src="https://i.imgur.com/vUf3YwH.png"></a>
-             <div class="headingText">
-              <video src="https://i.imgur.com/toQGU6T.mp4" loop= true autoplay muted>
-           </div>
-          <a class="google" href="/auth/google">Login <%= user ? user.name : "friend" %>!<img id= "login" src="https://i.imgur.com/pFhNdoN.png"></a>
-      </div>
-    </div>
-    <div class="input-group">
-      <input placeholder=" 🔍   Search..."  type="text" class="form-control" aria-label="Text input with dropdown button"> 
-      
-      <div class="input-group-append">
-         <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Playdates & Kids Meals</button>
-         <div class="dropdown-menu">
-           <a class='dropdown-item' href="/"><i class= home></i>Home</a>
-           <a class='dropdown-item' href="/"><i class= home></i>Kid-Friendly Dining & Meals</a>
-           <a class='dropdown-item' href="/"><i class= home></i>Kid-Friendly Explorations &Experiences</a>
-           <div role="separator" class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">About</a>
-           <a class="dropdown-item" href="#">Help</a>
-           
-           <div class="dropdown-item">
-             <% if (user) { %>
-                <a class="google" href="/auth/logout">Logout <%= user ? user.name : "friend" %>!<img id="logout" src="https://i.imgur.com/SYX8qpu.png"></a>
-              <% } else { %>
-              <a class="google" href="/auth/google">Login <%= user ? user.name : "friend" %>!<img id= "login" src="https://i.imgur.com/pFhNdoN.png"></a>
-             <% } %>
-             </div>
-         </div>
-       </div>
-     </div>
-       <% } %> 
-      
-        
-        <!--Reminder: Add in icons to nav bar-->    
-  </header>
-<script defer>
-  $('.dropdown-toggle').dropdown()
-</script>
