@@ -1,17 +1,22 @@
 /* Partials */
-div.header{
+div.header, #logout{
  display: flex;
  justify-content: space-between;
+ align-items: center;
+ margin-right: 15px;
+ margin-left: 20px;
 }
 div.header img{
   height: 130px;
   width: 130px;
 }
-div.headingText h1{
- color: #e4e215;
-}
-div.headingText h4{
-  color: white;
+div.headingText video{
+  display: inline-flexbox;
+  height: 200px;
+  width: 500px;
+  border: white 20px solid;
+  outline: solid 10px green;
+  object-fit: cover;
 }
 #logout{
   display: flex;
@@ -20,8 +25,6 @@ div.headingText h4{
   border-radius: 100%;
   text-align: left;
   border: solid 2px white;
-  margin-left: 20px;
-  margin-top: 20px;
 }
 #login{
   display: flex;
@@ -35,7 +38,7 @@ div.headingText h4{
 }
 footer{
   font-family: 'Architects Daughter', cursive;
-  color: black;
+  color: yellow;
   font-size: 25px;
   text-align: center;
   font-variant-caps: small-caps ;
@@ -44,11 +47,10 @@ footer{
 /* Home Page */
 body.homePage {
   font-family: 'Poppins', sans-serif;
-  background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   color: green;
-   background-color:  #38b6ff;
+  background-color:  #38b6ff;
   font-variant-caps: small-caps ;
 }
 #videoHP{

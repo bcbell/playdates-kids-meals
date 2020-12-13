@@ -2,10 +2,16 @@
 
 <body class="homePage">
  <div class="homePage">
-    <!-- <h1 class="homePage">hello, <%= user ? user.name : "friend" %>!</h1> -->
+<% if (user) { %> <!---Logged In-->
+    <h1 class="homePage">hello, <%= user ? user.name : "friend" %>!</h1>
+
+
+    <% } else { %> <!---Logged Out-->
     <video id="videoHP" src="https://i.imgur.com/6wv9lnK.mp4" loop=true autoplay muted cover></video>
 
     
 </div>
+ <% } %> 
 <%- include('partials/footer') %>
+
 </body>
