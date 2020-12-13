@@ -5,13 +5,59 @@
 <% if (user) { %> <!---Logged In-->
     <h1 class="homePage">hello, <%= user ? user.name : "friend" %>!</h1>
 
+    
+      <div class="card-deck ">
+        <div class="card bg-warning">
+          <a href="/"><img class="card-img-top" src="https://i.imgur.com/0QB7W8L.png" alt="Card image cap"></a>
+          <div class="card-body">
+            <h5 class="card-title">Kid-Friendly Dining & Meals</h5>
+            <button type="button" href="#" class="btn btn-success btn-lg btn-block">Block level button</button>
+            <button type="button" href="#" class="btn btn-success btn-lg btn-block">Block level button</button>
+            <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card bg-warning">
+          <a href="/"><img class="card-img-top" src="https://i.imgur.com/vwI7k0J.png" alt="Card image cap"></a>
+          <div class="card-body">
+            <h5 class="card-title">Kid-Friendly Explorations & Experiences</h5>
+            <button type="button" href="#" class="btn btn-success btn-lg btn-block">Block level button</button>
+            <button type="button" href="#" class="btn btn-success btn-lg btn-block">Block level button</button>
+            <!-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> -->
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card bg-warning">
+         <a href="/"><img class="card-img-top" src="https://i.imgur.com/5sJEp7I.png" alt="Card image cap"></a> 
+          <div class="card-body">
+            <h5 class="card-title">Family Q & A Board</h5>
+            <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
 
-    <% } else { %> <!---Logged Out-->
-    <video id="videoHP" src="https://i.imgur.com/6wv9lnK.mp4" loop=true autoplay muted cover></video>
+
+
+
 
     
+
+
+
+
+
+<% } else { %> <!---Logged Out-->
+    <video id="videoHP" src="https://i.imgur.com/6wv9lnK.mp4" loop=true autoplay muted cover></video>    
 </div>
  <% } %> 
+
 <%- include('partials/footer') %>
 
 </body>
