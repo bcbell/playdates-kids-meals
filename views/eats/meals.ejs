@@ -1,0 +1,23 @@
+<%-include('../partials/header')%>
+<body class="eatsPage">
+ <h1><%= title %></h1>
+ <% if (user) { %> <!---Logged In-->
+
+
+
+<h1>Hello</h1>
+
+<% } else { %> <!---Logged Out-->
+
+<h1>You're not signed in</h1>
+
+
+<% } %> 
+
+<%-include('../partials/footer')%>
+
+<script>
+    $('.dropdown-toggle').dropdown()
+</script>
+
+</body>

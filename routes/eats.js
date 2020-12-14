@@ -1,9 +1,7 @@
 const router =require('express').Router();
-const usersCtrl =require('../controllers/accounts');
+const eatsCtrl =require('../controllers/eats');
 
-router.get('/', isLoggedIn, usersCtrl.index)
-
-
+router.get('/', isLoggedIn, eatsCtrl.index)
 
 function isLoggedIn(req, res, next){
     if (req.isAuthenticated()) 

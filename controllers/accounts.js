@@ -7,7 +7,7 @@ module.exports={
 function index(req, res) {
     User.find({}).then((user) => {
       res.render("users/account", {
-          title: "Account Settings", user });
+     title: "Account Settings", user: req.user, user });
     });
   }
 
