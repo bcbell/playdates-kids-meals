@@ -105,3 +105,4 @@ __List of Technologies Used:__
 - Canva
 - Imgur
 - YouTube
+- Favicon
