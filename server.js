@@ -22,6 +22,9 @@ const authRouter = require("./routes/auth");
 const usersRouter = require('./routes/users');
 const eatsRouter = require('./routes/eats');
 const locationsRouter = require('./routes/locations')
+const messagesRouter = require('./routes/messages')
+const aboutRouter = require('./routes/about')
+const contactRouter = require('./routes/contact')
 
 const app = express();
 
@@ -54,7 +57,11 @@ app.use("/", indexRouter);
 app.use("/auth", authRouter);
 app.use('/account', usersRouter);
 app.use('/eats', eatsRouter);
-app.use('/locations', locationsRouter)
+app.use('/locations', locationsRouter);
+app.use('/messageboard', messagesRouter);
+app.use('/company', aboutRouter);
+app.use('/help', contactRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
