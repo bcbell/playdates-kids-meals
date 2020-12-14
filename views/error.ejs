@@ -1,12 +1,40 @@
-<h1>Error Page </h1>
-
-<body class="error">
-    <h1><%= message %></h1>
-    <h2><%= error.status %></h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/android-chrome-192x192.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+    <link rel="icon" href="/img/favicon.ico" > <title> Error</title>
+  </head>
+  <body class=error>
+    <header> 
+      <div class="errorHeader">
+       <a href="/"><img src="https://i.imgur.com/vUf3YwH.png"></a>
+        <div class="headingText">
+         <video src="https://i.imgur.com/R1pitdk.mp4" loop= true autoplay muted>
+         </div>
+    </div>   
+        <!--Reminder: Add in icons to nav bar-->    
+  </header>
+ 
+<video id="videoEP" src="https://i.imgur.com/AMrP2MQ.mp4" loop=true autoplay muted cover></video>
+<!--     
     <pre><%= error.stack %></pre>
+    <h1><%= message %></h1>
+    <h2><%= error.status %></h2> -->
+  <%- include('partials/footer') %>
 
-<h1>Error Footer</h1>
+  
 
-</body>
+
 
 

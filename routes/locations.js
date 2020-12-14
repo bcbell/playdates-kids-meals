@@ -1,8 +1,8 @@
 const router =require('express').Router();
-const eatsCtrl =require('../controllers/eats');
+const locationsCtrl =require('../controllers/locations');
 
 
-router.get('/', eatsCtrl.index)
+router.get('/', locationsCtrl.index)
 
 function isLoggedIn(req, res, next){
     if (req.isAuthenticated()) 

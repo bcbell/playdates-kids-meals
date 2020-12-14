@@ -18,6 +18,13 @@ div.headingText video{
   outline: solid 10px green;
   object-fit: cover;
 }
+#searchBtn{
+  background-color: green;
+  color: yellow;
+}
+#searchBtn:hover{
+  background-color: #ff1616;
+}
 #logout{
   display: flex;
   height: 4em;
@@ -61,6 +68,34 @@ body.homePage {
 div.card-deck button{
   font-variant-caps: small-caps ;
 }
+/* Error Page */
+body.error {
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  text-align: center;
+  color: black;
+  background-color:  #38b6ff;
+  font-variant-caps: small-caps ;
+}
+div.errorHeader{
+  display: flex;
+  justify-content: space-between;
+}
+div.errorHeader img{
+  display: flex;
+  justify-content: left;
+  height: 130px;
+  width: 130px;
+}
+div.errorHeader video{
+  margin-right: 450px; 
+}
+#videoEP{
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 /* Account Settings Page */
 body.accountPage {
   font-family: 'Poppins', sans-serif;
@@ -70,8 +105,17 @@ body.accountPage {
   background-color:  #38b6ff;
   font-variant-caps: small-caps ;
 }
-/* Account Settings Page */
+/* Eats Page */
 body.eatsPage {
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  background-color:  #38b6ff;
+  font-variant-caps: small-caps ;
+}
+/* Locations Page */
+body.locationsPage {
   font-family: 'Poppins', sans-serif;
   background-size: cover;
   text-align: center;
