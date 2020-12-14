@@ -5,15 +5,10 @@ module.exports={
 }
 
 function index(req, res) {
-    User.find({}).then((user) => {
+    User.find({}).then((users) => {
       res.render("users/account", {
-     title: "Account Settings", user: req.user, user });
+     title: "Account Settings", user: req.user, users});
     });
   }
 
-// function index(req, res, next){
-//     User.find({}).then((user)=>{
-//      res.render("users/account", {title: "Account Settings", user: req.user, user}) 
-//     })
-// }
 

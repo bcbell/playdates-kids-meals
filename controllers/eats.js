@@ -5,8 +5,8 @@ module.exports={
 }
 
 function index(req, res) {
-    Eat.find({}).then((user) => {
+    Eat.find({}).then((users, eats) => {
       res.render("eats/meals", {
-     title: "Kid-Friendly Dining & Meals", user});
+     title: "Kid-Friendly Dining & Meals", user: req.user,  users, eats});
     });
 }

@@ -1,7 +1,7 @@
 const router =require('express').Router();
 const usersCtrl =require('../controllers/accounts');
 
-router.get('/', isLoggedIn, usersCtrl.index)
+router.get('/', usersCtrl.index)
 
 
 

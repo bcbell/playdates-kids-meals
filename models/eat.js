@@ -8,6 +8,7 @@ const eatSchema = new Schema(
         avatar: String,
         googleId: String,
         bio: String,
+
       },
       {
         timestamps: true,
