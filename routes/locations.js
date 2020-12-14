@@ -3,6 +3,9 @@ const locationsCtrl =require('../controllers/locations');
 
 
 router.get('/', locationsCtrl.index)
+// router.get('/', locationsCtrl.weatherLocation)
+// router.post('/explorations/weatherquery', locationsCtrl.weatherQuery)
+
 
 function isLoggedIn(req, res, next){
     if (req.isAuthenticated()) 

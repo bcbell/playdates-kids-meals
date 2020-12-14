@@ -2,6 +2,7 @@ const User =require('../models/account')
 
 module.exports={
     index,
+    update
 }
 
 function index(req, res) {
@@ -11,4 +12,10 @@ function index(req, res) {
     });
   }
 
+  function update(req, res){
+      User.findByIdAndUpdate(req.user._id, req.body,{new:true})
+      .then(()=>{
+          res.redirect("/users/account")
+      })
+  }
 

@@ -2,6 +2,7 @@ const router =require('express').Router();
 const usersCtrl =require('../controllers/accounts');
 
 router.get('/', usersCtrl.index)
+router.put('/account', usersCtrl.update)
 
 
 

@@ -3,8 +3,29 @@
  <h1><%= title %></h1>
  
 <h1 class="accountPage">hello, <%= user ? user.name : "friend" %>!</h1>
-
-  
+<form action="/users/account?_method=PUT" method="POST">
+   <img id="profilePic" height="200"  src="<%=user.avatar%>">
+   <input type="file" id="userImage" name="image" value="<%=user.avatar%>" >
+   <div id="profileInfo">
+        <div id="profile">
+            <h2>Profile:</h2><h4><%=user.name%></h4>
+            
+        </div>
+        <div id="phone">
+            <h2>Phone:</h2><h4><%=user.phoneNumber%></h4>
+            <input type="text" id="userPhone" name="phone" value="<%=user.phoneNumber%>" >
+        </div>
+        <div id="email">
+            <h2>Email:</h2><h4><%=user.email%></h4>
+            <input type="text" id="userEmail" name="email" value="<%=user.email%>" >
+        </div>
+        <div id="bio">
+            <h2>Bio:</h2><h4><%= user.bio%></h4>
+            <input type="text" id="userBio" name="bio" value="<%=user.bio%>" >
+        </div>
+        <input type="submit" value="Update Profile">
+    </div>
+</form>
 
  
 

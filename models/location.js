@@ -1,11 +1,16 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// const weatherSchema = new Schema(
+//   {
+//     city:String,
+
+//   })
 const locationSchema = new Schema(
     {
-        location: String,
+        city: String,
         email: String,
-        avatar: String,
+        sunrise: Number,
         googleId: String,
         bio: String,
 

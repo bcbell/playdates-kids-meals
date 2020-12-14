@@ -11,7 +11,10 @@ __DEMO__
 For demo, visit http://kidsmeals.herokuapp.com/
 
 __APIs__
-
+OpenWeather
+Zomato
+Yelp
+Pinterest 
 
 
 __Views__
@@ -19,13 +22,13 @@ __Views__
 2. Header
 3. Add Bootstrap 
 4. Home 
-   - [ ] 
+   - [ ] Open Weather API (N/A)
    - [ ] 
 5. Kid-Friendly Dining & Meals
-   - [ ] 
+   - [ ] Google Maps (N/A)
    - [ ] 
 6. Kid-Friendly Explorations & Experiences
-   - [ ] 
+   - [ ] Google Maps (N/A)
    - [ ] 
 7.  Family Q & A Board
    - [ ] 
