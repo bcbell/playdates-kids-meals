@@ -1,1 +1,22 @@
-<h1>Hello</h1>
+<%-include('partials/header')%>
+<body class="aboutPage">
+ <h1><%= title %></h1>
+ 
+<h1 class="aboutPage">hello, <%= user ? user.name : "friend" %>!</h1>
+
+  
+
+ 
+
+    
+   
+    
+       
+
+<%-include('partials/footer')%>
+
+<script>
+    $('.dropdown-toggle').dropdown()
+</script>
+
+</body>
