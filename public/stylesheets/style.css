@@ -46,6 +46,12 @@ div.headingText video{
 a{
   color: yellow;
 }
+#google{
+  color: black;
+}
+#googleHeader{
+  font-size:20px;
+}
 svg{
   margin-right: 10px;
 }

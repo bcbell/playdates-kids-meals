@@ -23,7 +23,7 @@
         <div class="headingText">
          <video src="https://i.imgur.com/R1pitdk.mp4" loop= true autoplay muted>
       </div>
-      <div class="logging"> <a class="google" href="/auth/logout">Logout <%= user ? user.name : "friend" %>!<img id="logout" src="https://i.imgur.com/SYX8qpu.png"></a>
+      <div class="logging"> <a id="googleHeader" class="google" href="/auth/logout">Logout, <%= user ? user.name : "friend" %>!<img id="logout" src="https://i.imgur.com/SYX8qpu.png"></a>
         </div>
       </div>
         <div class="input-group">
@@ -48,9 +48,9 @@
                
                <div class="dropdown-item">
                  <% if (user) { %>
-                    <a class="google" href="/auth/logout">Logout, <%= user ? user.name : "friend" %>!<img id="logout" src="https://i.imgur.com/SYX8qpu.png"></a>
+                    <a id="google" class="google" href="/auth/logout">Logout, <%= user ? user.name : "friend" %>!<img id="logout" src="https://i.imgur.com/SYX8qpu.png"></a>
                   <% } else { %>
-                  <a class="google" href="/auth/google">Login, <%= user ? user.name : "friend" %>!<img id= "login" src="https://i.imgur.com/pFhNdoN.png"></a>
+                  <a id= "google" class="google" href="/auth/google">Login, <%= user ? user.name : "friend" %>!<img id= "login" src="https://i.imgur.com/pFhNdoN.png"></a>
                  <% } %>
                  </div>
              </div>
@@ -63,7 +63,7 @@
              <div class="headingText">
               <video src="https://i.imgur.com/R1pitdk.mp4" loop= true autoplay muted>
            </div>
-          <a class="google" href="/auth/google">Login <%= user ? user.name : "friend" %>!<img id= "login" src="https://i.imgur.com/pFhNdoN.png"></a>
+          <a id="googleHeader" class="google" href="/auth/google">Login, <%= user ? user.name : "friend" %>!<img id= "login" src="https://i.imgur.com/pFhNdoN.png"></a>
       </div>
     </div>
     <div class="input-group">
@@ -87,9 +87,9 @@
            
            <div class="dropdown-item">
              <% if (user) { %>
-                <a class="google" href="/auth/logout">Logout, <%= user ? user.name : "friend" %>!<img id="logout" src="https://i.imgur.com/SYX8qpu.png"></a>
+                <a id="google" class="google" href="/auth/logout">Logout, <%= user ? user.name : "friend" %>!<img id="logout" src="https://i.imgur.com/SYX8qpu.png"></a>
               <% } else { %>
-              <a class="google" href="/auth/google">Login, <%= user ? user.name : "friend" %>!<img id= "login" src="https://i.imgur.com/pFhNdoN.png"></a>
+              <a id="google" class="google" href="/auth/google">Login, <%= user ? user.name : "friend" %>!<img id= "login" src="https://i.imgur.com/pFhNdoN.png"></a>
              <% } %>
              </div>
          </div>
