@@ -140,6 +140,31 @@ body.accountPage {
   background-color:  #38b6ff;
   font-variant-caps: small-caps ;
 }
+#profilePic{
+  display: run-in;
+  /* justify-content: left; */
+  margin-left: 70px; 
+  margin-top: 50px;
+  border: 4px solid white;
+}
+#profilePicture{
+  /* display: flex; */
+  border-right: 4px solid white;
+  padding-right: 50px;
+}
+#profileInfo{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-right: 200px;
+}
+#formAccount{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 130px;
+}
 /* Eats Page */
 body.eatsPage {
   font-family: 'Poppins', sans-serif;

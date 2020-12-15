@@ -2,8 +2,7 @@ const router =require('express').Router();
 const usersCtrl =require('../controllers/accounts');
 
 router.get('/', usersCtrl.index)
-router.put('/account', usersCtrl.update)
-
+router.get('/account/:id', usersCtrl.show)
 
 
 function isLoggedIn(req, res, next){

@@ -1,8 +1,9 @@
 const User =require('../models/account')
 
+
 module.exports={
     index,
-    update
+    show
 }
 
 function index(req, res) {
@@ -12,10 +13,13 @@ function index(req, res) {
     });
   }
 
-  function update(req, res){
-      User.findByIdAndUpdate(req.user._id, req.body,{new:true})
-      .then(()=>{
-          res.redirect("/users/account")
-      })
+  function show(req, res){
+      User.findById(req.params.id)
+        .then((userInfo)=>{
+           res,render('users/show', {
+              title: "Account Updated",
+               userInfo,
+               user:req.user
+           }) 
+        })
   }
-
