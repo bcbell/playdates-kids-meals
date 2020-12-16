@@ -131,7 +131,7 @@ div.errorHeader video{
   min-width: 100%;
   min-height: 100%;
 }
-/* Account Settings Page */
+/* Playground & Account Settings Page */
 body.accountPage {
   font-family: 'Poppins', sans-serif;
   background-size: cover;
@@ -165,6 +165,13 @@ body.accountPage {
   margin-bottom: 40px;
   margin-left: 130px;
 }
+button.playground{
+  margin-right: 40px;
+}
+#avatar{
+  border: 7px solid white;
+}
+
 /* Eats Page */
 body.eatsPage {
   font-family: 'Poppins', sans-serif;

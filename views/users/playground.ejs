@@ -1,0 +1,13 @@
+<%-include('../partials/header')%>
+<body class="accountPage">
+
+ 
+<h1 class="accountPage">Welcome to the Playground, <%= user ? user.name : "friend" %>!</h1>
+
+    <% users.forEach(function(user){%>
+        
+        <h3 class="playground"><%=user.name%></h3><a href ="/account" ><img height="200" width="200" id=avatar src="<%=user.avatar%>"><ul><button class="playground" type="button" >Account Settings<br>Playing since <%=user.createdAt.toLocaleString().split(',')[0]%></ul></button></a>
+
+   <% })%>
+
+

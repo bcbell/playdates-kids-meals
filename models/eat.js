@@ -3,11 +3,18 @@ const Schema = mongoose.Schema;
 
 const eatSchema = new Schema(
     {
-        location: String,
-        email: String,
-        avatar: String,
-        googleId: String,
-        bio: String,
+        id: String,
+        name: String,
+        url: String,
+        address: String,
+        locality: String,
+        city: String,
+        zipcode: Number,
+        cuisines: String,
+        timings: String,
+        highlights: String,
+        aggregate_rating: Number,
+        user: [{type: Schema.Types.ObjectID, ref:'User'}]
 
       },
       {
