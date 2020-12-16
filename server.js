@@ -55,7 +55,7 @@ app.use(passport.session());
 // router middleware
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
-app.use('/account', usersRouter);
+app.use('/playground', usersRouter);
 app.use('/eats', eatsRouter);
 app.use('/explorations', locationsRouter);
 app.use('/messageboard', messagesRouter);
