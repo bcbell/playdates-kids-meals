@@ -6,31 +6,28 @@
 
  
 <h1 class="accountPage">hello, <%= user ? user.name : "friend" %>!</h1>
+<form class="acccountUpdate" method="POST" action="/playground/<%=users._id%>?_method=PUT">
    <div id="formAccount">
     <div id="profilePicture">
         <img id="profilePic" height="200"  src="<%=users.avatar%>"><br>
-        <a href="/playground/<%=users._id%>/update"><button class= "accountPage" type="submit" >Update Account</button></a>
+        <button class= "accountPage" type="submit" >Update Profile</button>
     </div>
    <div id="profileInfo">
         <div id="profile">
-            
             <h2>Profile:</h2><h4><%=users.name%></h4>
             <h2>Email:</h2><h4><%=users.email%></h4>
-            <h2>About You:</h2><h4><%=users.bio%></h4>
-            <br>
-            <br>
-            <form action="/playground/<%=users._id%>" method="POST">
-                <input type="text" rows="4" " name="bio" placeholder="Add your bio here">
-                <input type="submit"value="Add Bio">
-            </form>
-            <br>
+            <input type="email" name="email" value="<%=users.email%>">
             <h2>Joined:</h2><h4><%= users.createdAt.toLocaleString().split(',')[0]%></h4>
-               
+            <br>
+            <h2>About You:</h2><h3><%=users.bio%></h3>
+            <textarea rows="4" name="bio"><%=users.bio%></textarea> 
+        
+       
     </div>
 </div>
 </div>
 </form>
-
+<a href="/playground/<%=users._id%>"><button class="playground">Account Details</button></a>
 </body>
  
 

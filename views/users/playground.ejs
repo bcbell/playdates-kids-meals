@@ -6,7 +6,7 @@
 
     <% users.forEach(function(user){%>
      <div class="playground">
-        <ul class="userInfo"><h3 class="playground"><%=user.name%></h3>Playing since <%=user.createdAt.toLocaleString().split(',')[0]%></ul><a href ="playground/<%=user._id%>" ><img height="200" width="200" id=avatar src="<%=user.avatar%>"><ul><button class="playground" type="button" >Update Account</button></ul></a>
+        <ul class="userInfo"><h3 class="playground"><%=user.name%></h3>Playing since <%=user.createdAt.toLocaleString().split(',')[0]%></ul><a href ="/playground/<%=user._id%>" ><img height="200" width="200" id=avatar src="<%=user.avatar%>"><ul><button class="playground" type="button" >Account Settings</button></ul></a>
     </div>
    <% })%>
 

@@ -8,6 +8,7 @@ const userSchema = new Schema(
     avatar: String,
     googleId: String,
     bio: String,
+    parent: Boolean
   },
   {
     timestamps: true,

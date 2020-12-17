@@ -3,6 +3,9 @@ const usersCtrl =require('../controllers/accounts');
 
 router.get('/', usersCtrl.index)
 router.get('/:id', usersCtrl.show)
+router.put('/:id/', usersCtrl.update)
+router.get('/:id/update', usersCtrl.edit)
+// router.post('/:id/', usersCtrl.create)
 
 
 function isLoggedIn(req, res, next){
