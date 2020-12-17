@@ -2,24 +2,28 @@
 <body class="accountPage">
  <h1><%= title %></h1>
  
+      
+
+ 
 <h1 class="accountPage">hello, <%= user ? user.name : "friend" %>!</h1>
-<!-- <form class="acccountUpdate" method="POST" action="/account/<%=user._id%>> -->
+<form class="acccountUpdate" method="POST" action="/account/<%=users._id%>">
    <div id="formAccount">
     <div id="profilePicture">
-        <img id="profilePic" height="200"  src="<%=user.avatar%>"><br>
-        <button type="submit" name="_method" value="Update Profile">Update Profile</button>
+        <img id="profilePic" height="200"  src="<%=users.avatar%>"><br>
+        <button class= "accountPage" type="submit" name="_method" value="Update Profile">Update Profile</button>
     </div>
    <div id="profileInfo">
         <div id="profile">
-            <h2>Profile:</h2><h4><%=user.name%></h4>
-            <h2>Email:</h2><h4><%=user.email%></h4>
-            <h2>Member Since:</h2><h4><%= user.createdAt.toLocaleString().split(',')[0]%></h4>
+            <h2>Profile:</h2><h4><%=users.name%></h4>
+            <h2>Email:</h2><h4><%=users.email%></h4>
+            <h2>Member Since:</h2><h4><%= users.createdAt.toLocaleString().split(',')[0]%></h4>
             <br>
        
     </div>
 </div>
 </div>
 </form>
+
 </body>
  
 

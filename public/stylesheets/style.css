@@ -166,13 +166,15 @@ body.accountPage {
 #profilePicture{
   /* display: flex; */
   border-right: 4px solid white;
-  padding-right: 50px;
+  padding-right: 150px; 
+  
 }
 #profileInfo{
   display: flex;
   justify-content: left;
   align-items: center;
   margin-right: 200px;
+
 }
 #formAccount{
   display: flex;
@@ -187,7 +189,21 @@ button.playground{
   color: yellow;
   font-family: 'Poppins', sans-serif;
   font-variant-caps: small-caps ;
+  padding: 10px;
+  border-radius: 10px;
 }
+body.accountPage h4{
+  color: yellow;
+}
+button.accountPage{
+  margin-left: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: red;
+  color: yellow;
+  font-family: 'Poppins', sans-serif;
+  font-variant-caps: small-caps ;
+} 
 #avatar{
   border: 7px solid white;
 }
