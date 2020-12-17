@@ -6,7 +6,8 @@ module.exports={
    show,
    update,
     edit, 
-    // create
+    delete :deleteProfile
+    
 }
 
 function index(req, res) {
@@ -34,10 +35,9 @@ function edit(req, res){
         res.render('users/updated', {title: 'Account Settings', user: req.user, users})
     })
 }
-// function create(req, res){
-//     req.user =req.body.bio
-//     User.create (req.body)
-//     .then((user)=>{
-//     res.redirect(`/playground/${req.params.id}`)
-//     })
-// }
+function deleteProfile(req, res){
+    User.findByIdAndDelete(req.params.id)
+    .then(()=>{
+        res.redirect(`/playground/${req.params.id}`)
+    })
+}

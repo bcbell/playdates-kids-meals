@@ -5,7 +5,8 @@ router.get('/', usersCtrl.index)
 router.get('/:id', usersCtrl.show)
 router.put('/:id/', usersCtrl.update)
 router.get('/:id/update', usersCtrl.edit)
-// router.post('/:id/', usersCtrl.create)
+router.delete('/:id', usersCtrl.delete)
+
 
 
 function isLoggedIn(req, res, next){

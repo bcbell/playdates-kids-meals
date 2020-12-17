@@ -9,7 +9,7 @@
 <form class="acccountUpdate" method="POST" action="/playground/<%=users._id%>?_method=PUT">
    <div id="formAccount">
     <div id="profilePicture">
-        <img id="profilePic" height="200"  src="<%=users.avatar%>"><br>
+        <img id="profilePic" height="200"  src="<%=users.avatar ? users.avatar : 'https://i.imgur.com/VgK9N5f.png' %>"><br>
         <button class= "accountPage" type="submit" >Update Profile</button>
     </div>
    <div id="profileInfo">
