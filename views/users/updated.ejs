@@ -19,7 +19,7 @@
             <input type="email" name="email" value="<%=users.email%>">
             <h2>Joined:</h2><h4><%= users.createdAt.toLocaleString().split(',')[0]%></h4>
             <br>
-            <h2>About You:</h2><h3><%=users.bio%></h3>
+                <h2>About You:</h2><h4 class="bio" ><%=users.bio%></h3>
             <textarea rows="4" name="bio"><%=users.bio%></textarea> 
         
        

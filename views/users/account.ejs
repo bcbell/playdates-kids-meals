@@ -8,28 +8,26 @@
 <h1 class="accountPage">hello, <%= user ? user.name : "friend" %>!</h1>
    <div id="formAccount">
     <div id="profilePicture">
+        
         <img id="profilePic" height="200"  src="<%=users.avatar ? users.avatar : 'https://i.imgur.com/VgK9N5f.png' %>"><br>
-        <a href="/playground/<%=users._id%>/update"><button class= "accountPage" type="submit" >Update Account</button></a>
-       <form method="POST" action="/playground/<%=users._id%>?_method=DELETE">
-        <button id="delete" class= "accountPage"type="submit" >Delete Account</button>
-       </form>
+      <form method="POST" action="/playground/<%=users._id%>?_method=DELETE">
+            <button id="delete" class= "accountPage"type="submit" >Delete Account</button>
+           </form>
     </div>
    <div id="profileInfo">
         <div id="profile">
             
             <h2>Profile:</h2><h4><%=users.name%></h4>
             <h2>Email:</h2><h4><%=users.email%></h4>
-
             <h2>About You:</h2><h4 class="bio"><%=users.bio %></h4>
-            <br>
-            <br>
-            <h2>Joined:</h2><h4><%= users.createdAt.toLocaleString().split(',')[0]%></h4>
-               
+            <h2>Joined:</h2><h4><%= users.createdAt.toLocaleString().split(',')[0]%></h4>     
     </div>
-</div>
-<a href="/playground"><button class="playground">Account Details</button></a>
+    
 </div>
 
+</div>
+<a href="/playground"><button id="back" class="playground">Back</button></a>  <a  href="/playground/<%=users._id%>/update"><button class= "accountPage" id="updateButton" type="submit" >Update Account</button></a>
+ 
 
 </body>
  

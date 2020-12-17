@@ -166,7 +166,7 @@ body.accountPage {
 #profilePicture{
   /* display: flex; */
   border-right: 4px solid white;
-  padding-right: 150px; 
+  padding-right: 300px; 
   
 }
 #profileInfo{
@@ -217,6 +217,9 @@ div.playground{
 }
 div.play{
   background-color: rgba(8, 8, 8, 0.387);
+}
+h4.bio{
+  margin-left: 100px;
 }
 
 /* Eats Page */
