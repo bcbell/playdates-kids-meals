@@ -1,6 +1,6 @@
 # playdates-kids-meals
 
-This project is designed for families with kids. As a mother of 2 toddlers, I wanted to create an application that would be beneficial to parents and caregivers looking to kid-friendly meals, attractions, and restaurants. Offering families a unique varity resources for entertainment and meal time.  
+This project is designed for families with kids. As a mother of 2 toddlers, I wanted to create an application that would be beneficial to parents and caregivers looking to kid-friendly meals, attractions, and restaurants. Offering families a unique varity of resources from entertainment and meal time.  
 
 __App Overview__
 
@@ -11,10 +11,7 @@ __DEMO__
 For demo, visit http://kidsmeals.herokuapp.com/
 
 __APIs__
-OpenWeather
-Zomato
-Yelp
-Pinterest 
+ 
 
 
 __Views__
@@ -22,30 +19,38 @@ __Views__
 2. Header
 3. Add Bootstrap 
 4. Home 
-   - [ ] Open Weather API (N/A)
-   - [ ] 
+   - [x ] Video (non-user)
+   - [ ] Cards (users)
 5. Kid-Friendly Dining & Meals
-   - [ ] Google Maps (N/A)
-   - [ ] 
+   - [ ] Google Maps & YouTube (N/A)
+   - [ x] List of recipes and restaurants
+   - [x ] Able to view individual recipes and restaurants
+   - [x ] Able to add recipes and restaurants (users)
+   - [ ] Reviews
+   - [ ] Search capabilities
 6. Kid-Friendly Explorations & Experiences
    - [ ] Google Maps (N/A)
-   - [ ] 
+   - [ x] List of attractions
+   - [x ] Able to view individual attractions
+   - [ x] Able to add attractions
+   - [ ] Reviews
+   - [ ] Search capabilities
 7.  Family Q & A Board
    - [ ] 
    - [ ] 
 8. About Us
-   - [ ] 
-   - [ ] 
+   - [ x] Added an About Page
 9. Account Settings
-   - [ ] 
-   - [ ] 
+   - [ x] Users can view other users
+   - [ x] Users can view their individual account
+   - [x ] Users can update and delete their account
 10. Contact Us
-   - [ ] 
+   - [ x] Contact Form
    - [ ] 
    
 __Models__
 1. Schema
-   - [ ] Goal
+   - [ x] Schemas for locations, users, restaurants, recipes
 
 __Controllers__
 1. Controllers created 
@@ -85,7 +90,7 @@ __Premlinary Planning__
  1. CSS and HTML
    - [ x ] Fonts- Poppins Light & Architects Daughter
    - [ ]  Colors- Light blue (#38b6ff), Bright red (#ff1616), green(#578e44), grey (#607d8b), turquoise blue (#5ce1e6), black( #000000)
-   - [ x ]  Background Image ![Image](https://i.imgur.com/yjgdboN.png)
+   - [ x ]  Background Image ![Image](https://i.imgur.com/ctuJbvw.png)
    - [ ]  
  2. Nav Bar 
    - [x ] Logo (Left)
@@ -112,7 +117,7 @@ __Final__
 
 __Future Enhancements__
 
-1. Future Enhancements here
+1. Include chat functionality
 
    
 
