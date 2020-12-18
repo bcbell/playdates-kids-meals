@@ -1,19 +1,73 @@
 <%-include('../partials/header')%>
 <body class="eatsPage">
- <h1><%= title %></h1>
+ <h1>Ready for some <%= title %>, <%= user ? user.name : "friend" %>?</h1>
 
- <h1 class="homePage">hello, <%= user ? user.name : "friend" %>!</h1>
-
-
-
-
-
-
-
-
-
-
-
+<div class= "tabsEats">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Kids-Friendly Restaurants</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Kid-Friendly Meals</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Restaurant & Meal Recommendations</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content">
+    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+    <!-- Kid-Friendly Restaurant Display  -->
+    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="restaurantsCards">
+            <div id= "restaurants" class="card" style="width: 18rem;">
+                <img src="https://i.imgur.com/gtwqxSG.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p id="restaurantCard" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div id= "restaurants" class="card" style="width: 18rem;">
+                <img src="https://i.imgur.com/gtwqxSG.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p id="restaurantCard" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div id= "restaurants" class="card" style="width: 18rem;">
+                <img src="https://i.imgur.com/gtwqxSG.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p id="restaurantCard" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+        </div>
+    </div>
+   <!-- Kid  Meals Recipe Display -->
+    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+        <div class="recipeCards">
+        <div id= "recipes" class="card" style="width: 18rem;">
+            <img src="https://i.imgur.com/gtwqxSG.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p id="recipesCard" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div id= "recipes" class="card" style="width: 18rem;">
+            <img src="https://i.imgur.com/gtwqxSG.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p id="recipesCard" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div id= "recipes" class="card" style="width: 18rem;">
+            <img src="https://i.imgur.com/gtwqxSG.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p id="recipesCard" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div>
+</div>
+    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+    </div>
+  </div>
+</div>
 
 
 <%-include('../partials/footer')%>
@@ -21,5 +75,10 @@
 <script>
     $('.dropdown-toggle').dropdown()
 </script>
+<script>
+    $(function () {
+      $('#myTab li:last-child a').tab('show')
+    })
+  </script>
 
 </body>

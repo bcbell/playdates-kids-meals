@@ -1,25 +1,24 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const eatSchema = new Schema(
-    {
-        id: String,
-        name: String,
-        url: String,
-        address: String,
-        locality: String,
-        city: String,
-        zipcode: Number,
-        cuisines: String,
-        timings: String,
-        highlights: String,
-        aggregate_rating: Number,
-        user: [{type: Schema.Types.ObjectID, ref:'User'}]
+const ingredientSchema= new Schema({
+    foodId: String,
+    quantity: Number,
+    Measure: Number,
+    foodCategory: String
 
-      },
-      {
-        timestamps: true,
-      }
-    );
+})
+const eatSchema =new Schema({
+    name:String,
+    mealType: {type:String, enum:['breakfast', 'lunch', 'dinner', 'snack']},
+    diet: {type: String, enum:["balanaced", "high-protein","low-carb", "low-fat","low-sodium", "high-fiber"]},
+    cuisineType: {type: String, enum:['american', 'southern', 'soul-food', 'chinese', 'indian']},
+    health: {type: String, enum:["peanut-free", "tree-nut free","seafood-free", "shell-fish free", 'dairy-free', 'milk-free', 'vegetarian', 'vegan', 'palo']},
+    dishType: {type: String, enum:['soup', 'salad', 'sandwich', 'side', 'main', 'pasta', 'chicken']} ,
+    url: String,
+    ingredients: [ingredientSchema],
 
-module.exports = mongoose.model("Eat", eatSchema);
+    
+})
+
+module.exports=mongoose.model("Eat", eatSchema)

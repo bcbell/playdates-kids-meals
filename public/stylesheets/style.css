@@ -164,9 +164,8 @@ body.accountPage {
   border: 4px solid white;
 }
 #profilePicture{
-  /* display: flex; */
   border-right: 4px solid white;
-  padding-right: 300px; 
+  padding-right: 230px; 
   
 }
 #profileInfo{
@@ -204,6 +203,13 @@ button.accountPage{
   font-family: 'Poppins', sans-serif;
   font-variant-caps: small-caps ;
 } 
+
+a.googleAccount{
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+
 #avatar{
   border: 7px solid white;
 }
@@ -219,7 +225,7 @@ div.play{
   background-color: rgba(8, 8, 8, 0.387);
 }
 h4.bio{
-  margin-left: 100px;
+ font-display: inline-block;
 }
 
 /* Eats Page */
@@ -230,6 +236,35 @@ body.eatsPage {
   color: white;
   background-color:  #38b6ff;
   font-variant-caps: small-caps ;
+}
+div.tabsEats{
+  margin-top: 50px;
+  font-family: 'Architects Daughter', cursive;
+  font-variant-caps: small-caps ;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: orange;
+}
+#recipesCard{
+  color: black;
+}
+#recipes{
+  
+  margin-top: 10px;
+}
+div.recipeCards{
+  display: flex;
+  justify-content: space-evenly;
+}
+#restaurantCard{
+  color: black;
+}
+#restaurants{
+  margin-top: 10px;
+}
+div.restaurantsCards{
+  display: flex;
+  justify-content: space-evenly;
 }
 /* Locations Page */
 body.locationsPage {
@@ -258,6 +293,21 @@ body.aboutPage {
   background-color:  #38b6ff;
   font-variant-caps: small-caps ;
 }
+p.aboutText{
+  font-size: 20px;
+  display: inline-block;
+  width: 350px;
+  margin-top: 30px;
+  outline: 2px solid red;
+  outline-width: medium;
+  background: green;
+}
+span.aboutText{
+  font-size: 30px;
+}
+div.aboutPage{
+  margin-top: 30px;
+}
 /* Contact Us Page */
 body.contactPage {
   font-family: 'Poppins', sans-serif;
@@ -266,4 +316,15 @@ body.contactPage {
   color: white;
   background-color:  #38b6ff;
   font-variant-caps: small-caps ;
+}
+#contactUs{
+  display: flex;
+  justify-content: center;
+}
+#state{
+  margin-top: 40px;
+  margin-right: 20px;
+}
+#contactMessage{
+  margin-top: 40px;
 }

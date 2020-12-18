@@ -7,6 +7,7 @@ const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require("method-override");
 
+
 // load env variables
 require("dotenv").config();
 
@@ -52,6 +53,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 // router middleware
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
@@ -61,6 +63,7 @@ app.use('/explorations', locationsRouter);
 app.use('/messageboard', messagesRouter);
 app.use('/company', aboutRouter);
 app.use('/help', contactRouter)
+
 
 
 // catch 404 and forward to error handler

@@ -1,8 +1,51 @@
 <%-include('partials/header')%>
 <body class="contactPage">
- <h1><%= title %></h1>
+ <h1><%= title %>, <%= user ? user.name : "friend" %>!</h1>
 
- <h1 class="homePage">hello, <%= user ? user.name : "friend" %>!</h1>
+ <form id="contactUs" method="GET" class="row g-3">
+    <div class="col-md-4">
+        <label for="inputEmail4" class="form-label">Name</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="mb-4">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+    <div class="col-4">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="col-2">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="col-md-3">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" placeholder="City">
+    </div>
+    <div id="state" class=" md-3">
+      <label for="inputState" class="form-label">State</label>
+      <select  id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>Alabama</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip" placeholder="ZIP Code">
+    </div>
+    <div class="col-6">
+      <div id= "contactMessage" class="form-check">
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
  
 
 

@@ -7,6 +7,9 @@ const userSchema = new Schema(
     email: String,
     avatar: String,
     googleId: String,
+    phone : Number,
+    locality: String,
+    state: String,
     bio: String,
     parent: Boolean
   },

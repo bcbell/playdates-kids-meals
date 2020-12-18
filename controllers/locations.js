@@ -1,3 +1,4 @@
+
 const Location = require('../models/location')
 const { response } = require('../server')
 

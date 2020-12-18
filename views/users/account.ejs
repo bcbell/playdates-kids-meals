@@ -4,21 +4,27 @@
  
       
 
- 
+ <% if(user){ %> 
 <h1 class="accountPage">hello, <%= user ? user.name : "friend" %>!</h1>
-   <div id="formAccount">
+    
+        <div id="formAccount">
     <div id="profilePicture">
-        
+      
         <img id="profilePic" height="200"  src="<%=users.avatar ? users.avatar : 'https://i.imgur.com/VgK9N5f.png' %>"><br>
-      <form method="POST" action="/playground/<%=users._id%>?_method=DELETE">
+     
+        <form method="POST" action="/playground/<%=users._id%>?_method=DELETE">
             <button id="delete" class= "accountPage"type="submit" >Delete Account</button>
-           </form>
+        </form>
+   
     </div>
    <div id="profileInfo">
         <div id="profile">
             
             <h2>Profile:</h2><h4><%=users.name%></h4>
             <h2>Email:</h2><h4><%=users.email%></h4>
+            <h2>Phone Number:</h2><h4><%=users.phone%></h4>
+            <h2>Closest City:</h2><h4><%=users.locality%></h4>
+            <h2>State:</h2><h4><%=users.state%></h4>
             <h2>About You:</h2><h4 class="bio"><%=users.bio %></h4>
             <h2>Joined:</h2><h4><%= users.createdAt.toLocaleString().split(',')[0]%></h4>     
     </div>
@@ -26,16 +32,22 @@
 </div>
 
 </div>
-<a href="/playground"><button id="back" class="playground">Back</button></a>  <a  href="/playground/<%=users._id%>/update"><button class= "accountPage" id="updateButton" type="submit" >Update Account</button></a>
+<a href="/playground"><button id="back" class="playground">Back</button></a> <%if(user){%>  <a  href="/playground/<%=users._id%>/update"><button class= "accountPage" id="updateButton" type="submit" >Update Account</button></a> <%} else{%> <%}%>
  
 
 </body>
  
 
     
-   
+<% } else{%>
+     <!-- Not Logged In -->
+     <h1 class="accountPage">hello, <%= user ? user.name : "friend" %> login below!</h1>
+     <div class="loginAccount">
+    <a id="google" class="googleAccount" href="/auth/google">
+       <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
+    <%}%> 
     
-       
+       </div>
 
  <%-include('../partials/footer')%>
 
