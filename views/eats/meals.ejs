@@ -29,7 +29,7 @@
                   <h1 id="headerRecipes" class="display-4">The Blackboard of Meals</h1>
                       <h4 class="recipeDisplay">Would the kiddos enjoy?</h4>
                   <p class="lead"><% eats.forEach(function(eat){ %> 
-                    <a href="eats/recipe/<%=eat._id%>" ><h2><%=eat.title%></h2></a>
+                    <a href="eats/<%=eat._id%>" ><h2><%=eat.title%></h2></a>
                   
                       <%})%>   </p>
                 </div>
