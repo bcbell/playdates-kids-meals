@@ -5,7 +5,8 @@ const ingredientSchema= new Schema({
     foodId: String,
     quantity: Number,
     Measure: Number,
-    foodCategory: String
+    foodCategory: String,
+    ingredients: Boolean
 
 })
 const eatSchema =new Schema({

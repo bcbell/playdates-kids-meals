@@ -25,6 +25,7 @@ function newRecipe(req, res){
 }
 
 function create(req, res){
+    req.body.ingredients= req.body.ingredients ==="on" ?true: false
     Eat.create(req.body)
     .then((eats, users, rest)=>{
         res.redirect('/eats')

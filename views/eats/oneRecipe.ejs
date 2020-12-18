@@ -3,11 +3,74 @@
 <body class="eatsPage">
  <h1>Hey, <%= user ? user.name : "friend" %> let's get to cookin' some <%= title %> !</h1>
 
- <h1><%=eats.title%></h1>
-<h1><%=eats.meal%></h1>
+ 
+<div class= "tabsEats">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    
+  
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Video: How to cook <%=eats.title%> </a>
+      </li>    
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%=eats.title%> Grocery Guide</a>
+      </li> 
+       <li class="nav-item" role="presentation">
+        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="true">Recipe: <%=eats.title%> </a>
+      </li>
+    </ul>
+    
+    <div class="tab-content">
+      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
+      <!-- Kid  Meals Recipe Display -->
+      <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+          <div class="list-group">
+              <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
+                  <div class="container">
+                    <h1 id="headerRecipes" class="display-4">Recipe: <%=eats.title%> </h1>
+                        <h4 class="recipeDisplay">Let's get started</h4>
+                         <p class="lead"><%=eats.title%> </p>
+                  </div>
+                </div>
+        </div>
+     </div>
+  
+      <!-- Grocery List Display  -->
+      <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div class="list-group">
+              <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
+                  <div class="container">
+                    <h1 id="headerRecipes" class="display-4">The <%=eats.title%> Grocery Guide</h1>
+                    <h4 class="recipeDisplay">Did you get everything? </h4>
+                    <p class="lead">
+                     
+                     <input type="checkbox" value="<%=eats.ingredients%>">
+                     <label>Ingredient</label>
+                    
+                    </p>
+                  </div>
+                </div>
+        </div>
+    </div>
+  <!-- To recipe video -->
+<div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+    <div id="recipeDisplay">
+    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="container">
+            <h1 id="headerRecipes" class="display-4">Video: How to cook <%eats.title%></h1>
+            <h4 class="recipeDisplay">Step by step walkthrough video </h4>
+     
+        
 
+       
 
+     </div>
 
+</div>
+    </div>
+</div>
+</div>
+</div>
+    
 
 <%-include('../partials/footer')%>
 
