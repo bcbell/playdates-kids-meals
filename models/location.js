@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 const locationSchema = new Schema(
     {
         // id: String,
-        name: String,
-        url: String,
-        address: String,
-        locality: String,
-        city: String,
-        zipcode: Number,
+        placename: String,
+        placeurl: String,
+        placeaddress: String,
+        placelocality: String,
+        placecity: String,
+        placezipcode: Number,
         timings: String,
         locationType: String,
         age : Number,

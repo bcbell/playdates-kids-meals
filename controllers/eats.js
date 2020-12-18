@@ -32,9 +32,9 @@ function create(req, res){
 
 }
 function show(req, res){
-    Eat.findById(req.params._id)
+    Eat.findById(req.params.id)
     .then((eats)=>{
-     res.render('eats/oneRecipe',{ title: `${req.params._id}`, user:req.user, eats})   
+     res.render('eats/oneRecipe',{ title: 'good kid-friendly food', user:req.user, eats})   
     })
     
 }

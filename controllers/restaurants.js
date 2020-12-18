@@ -31,7 +31,7 @@ function create(req, res){
 function show(req, res){
     Rest.findById(req.params.id)
     .then((rest)=>{
-     res.render('eats/rest',{ title: `${req.params.id}`, user:req.user, rest})   
+     res.render('eats/rest',{ title: `kid-friendly establishment`, user:req.user, rest})   
     })
     
 }

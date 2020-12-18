@@ -5,7 +5,7 @@ const locationsCtrl =require('../controllers/locations');
 router.get('/', locationsCtrl.index)
 router.get('/attractions', locationsCtrl.new)
 router.post('/', locationsCtrl.create)
-// router.get('/:id', locationsCtrl.show)
+router.get('/:id', locationsCtrl.show)
 
 
 

@@ -5,7 +5,7 @@ module.exports={
     index,
     new: newAttraction,
     create,
-    // show
+    show
   
 }
 
@@ -27,10 +27,10 @@ function create(req, res){
      res.redirect('/explorations')   
     })
 }
-// function show(req, res){
-//     Rest.findById(req.params.id)
-//     .then((location)=>{
-//      res.render('locations/onePlace',{ title: `${req.params.id}`, user:req.user, location})   
-//     })
+function show(req, res){
+    Location.findById(req.params.id)
+    .then((location)=>{
+     res.render('locations/onePlace',{ title: 'kid & family-friendly establishment', user:req.user, location})   
+    })
     
-// }
+}

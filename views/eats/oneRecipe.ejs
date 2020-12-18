@@ -1,1 +1,23 @@
-<h1>Howdy</h1>
+
+<%-include('../partials/header')%>
+<body class="eatsPage">
+ <h1>Hey, <%= user ? user.name : "friend" %> let's get to cookin' some <%= title %> !</h1>
+
+ <h1><%=eats.title%></h1>
+<h1><%=eats.meal%></h1>
+
+
+
+
+<%-include('../partials/footer')%>
+
+<script>
+    $('.dropdown-toggle').dropdown()
+</script>
+<script>
+    $(function () {
+      $('#myTab li:last-child a').tab('show')
+    })
+  </script>
+
+</body>
