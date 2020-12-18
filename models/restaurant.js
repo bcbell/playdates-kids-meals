@@ -15,7 +15,7 @@ const restSchema = new Schema(
         highlights: String,
         aggregate_rating: Number,
         user: [{type: Schema.Types.ObjectID, ref:'User'}],
-        restaurants:  [{type: Schema.Types.ObjectId, ref: 'Rest'}],
+        location:  [{type: Schema.Types.ObjectId, ref: 'location'}],
 
       },
       {

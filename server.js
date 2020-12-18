@@ -27,7 +27,7 @@ const messagesRouter = require('./routes/messages')
 const aboutRouter = require('./routes/about')
 const contactRouter = require('./routes/contact')
 const restaurantRouter =require('./routes/restaurant')
-const recipesRouter= require('./routes/recipes')
+
 
 const app = express();
 
@@ -66,7 +66,7 @@ app.use('/messageboard', messagesRouter);
 app.use('/company', aboutRouter);
 app.use('/help', contactRouter)
 app.use('/restaurants', restaurantRouter);
-app.use('/recipes', recipesRouter)
+
 
 
 

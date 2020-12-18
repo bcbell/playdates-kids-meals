@@ -1,5 +1,6 @@
 const axios  = require('axios');
 const Eat =require('../models/eat')
+const Rest = require('../models/restaurant')
 
 // const User =require('../models/account')
 
@@ -24,7 +25,7 @@ function newRecipe(req, res){
 
 function create(req, res){
     Eat.create(req.body)
-    .then((eats, users)=>{
+    .then((eats, users, rest)=>{
         res.redirect('/eats')
     })
 

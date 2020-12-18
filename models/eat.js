@@ -18,7 +18,9 @@ const eatSchema =new Schema({
     steps: String, 
     url: String,
     ingredients: [ingredientSchema],
-    user: [{type: Schema.Types.ObjectID, ref:'User'}]
+    user: [{type: Schema.Types.ObjectID, ref:'User'}],
+    restaurants:  [{type: Schema.Types.ObjectId, ref: 'Rest'}],
+
 },{
     timestamps: true,
 }

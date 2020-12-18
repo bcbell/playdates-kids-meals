@@ -1,10 +1,18 @@
 <%-include('../partials/header')%>
 <body class="eatsPage">
     <h1>Ready to add a great <%= title %>, <%= user ? user.name : "friend" %>?</h1>
+        
+        <form class="recipeForm" action="/restaurants" method="POST">
+        <label>Name: </label><input type="text" name="name">
+        <label>Website: </label><input type="url" name="url" placeholder="restaurant.com">
+        <label>Address: </label><input type="text" name="address">
 
-
-
-
+        <button type="submit">Submit</button>
+        </form>
+    
+    
+    
+  
 
 
 
