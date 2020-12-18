@@ -251,9 +251,13 @@ div.tabsEats{
 }
 #headerRecipes{
   color: #38b6ff ;
+  border-bottom: white 2px double;
 }
 #recipes{
   margin-top: 10px;
+}
+h4.recipeDisplay{
+  color: white;
 }
 #textRecipes{
   color:black
@@ -274,6 +278,9 @@ button.add{
   font-variant-caps: small-caps ;
   font-family: 'Architects Daughter', cursive;
   margin-bottom: 40px;
+}
+p.mealsLogin{
+  margin-top: 30px;
 }
 /* Locations Page */
 body.locationsPage {

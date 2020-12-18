@@ -47,7 +47,8 @@
         <div class="list-group">
             <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
                 <div class="container">
-                  <h1 id="headerRecipes" class="display-4">Would the kiddos enjoy...</h1>
+                  <h1 id="headerRecipes" class="display-4">The Blackboard of Meals</h1>
+                      <h4 class="recipeDisplay">Would the kiddos enjoy?</h4>
                   <p class="lead"><% eats.forEach(function(eat){ %> 
                     <a href="eats/recipe/<%=eat._id%>" ><h2><%=eat.title%></h2></a>
                   
@@ -56,12 +57,23 @@
               </div>
     </div>
 </div>
+
 <!-- To add a recipe or restaurant -->
     <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
         <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            </h4><h3><p> Will you be adding a kid-friendly restaurant or recipe? </p></h3><br>
+           <% if (user) {%>
+         </h4><h3><p> Will you be adding a kid-friendly restaurant or recipe? </p></h3><br>
             <a href="/restaurants"><button class="add">Add Restaurant</button></a><a href="eats/recipes"><button class="add">Add Recipe</button></a><br>
-            <span><h4>Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</span>
+
+            <%} else{%>
+            <span ><h4>Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</span>
+
+            <p class="mealsLogin">Login in below, <%= user ? user.name : "friend" %> to a add your recommendation to the list!</p>
+
+            <div class="loginAccount">
+                <a id="google" class="googleAccount" href="/auth/google">
+                   <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
+         <%}%>
         </div>
     </div>
   </div>
