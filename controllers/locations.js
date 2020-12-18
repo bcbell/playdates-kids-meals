@@ -1,29 +1,28 @@
-const axios  = require('axios');
-const Rest =require('../models/restaurant')
 const Location = require('../models/location')
-const response  = require('../server')
+
 
 module.exports={
     index,
-    // weatherQuery,
-    // weatherLocation
+    new: newAttraction,
+    create
+  
 }
 
 function index(req, res){
-    Location.find({}).then((users, locations)=>{
+    Location.find({})
+    .then((locations, users)=>{
         res.render('locations/places',{
             title: "Kid-Friendly Explorations & Experiences", user: req.user, users, locations
         })
     })
 }
+function newAttraction(req, res){
+    res.render('locations/placesForm', {title: "Kid-Friendly Attraction", user:req.user})
+}
 
-// function weatherQuery(req, res){
-//     axois.get(`http://api.openweathermap.org/data/2.5/forecast?q=${req.body.city}&appid=${process.env,WEATHER_API_KEY}`)
-//     .then((user, response)=>{
-//         res.render('locations/places',{user, user: req.user, WeatherData:response.data})
-//     })
-// }
-
-// function weatherLocation (req, res){
-//     res.render('locations/places',{weatherData: null, user: req.user})
-// }
+function create(req, res){
+    Location.create(req.body)
+    .then((location, users)=>{
+     res.redirect('/explorations')   
+    })
+}
