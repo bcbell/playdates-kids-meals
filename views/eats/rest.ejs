@@ -8,54 +8,75 @@
 
  <div class= "tabsEats">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-    
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="true">Map to  <%=rest.name%></a>
-      </li>
-     
+   
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Map to <%=rest.name%> </a>
+      </li>  
+  
       <li class="nav-item" role="presentation">
         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%=rest.name%> Website</a>
-      </li>   
-       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Restaurant: <%=rest.name%></a>
-      </li>  
+      </li> 
+          <li class="nav-item" role="presentation">
+        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Experience <%=rest.name%> </a>
+      </li> 
     </ul>
     
     <div class="tab-content">
-        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">Tab here</div> 
-      <!-- Map to restaurant-->
-      <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-          <div class="list-group">
-              <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
-                  <div class="container">
-                    <h1 id="headerRecipes" class="display-4">Map to <%=rest.name%></h1>
-                        <h4 class="recipeDisplay">Here's how you get to <%=rest.name%></h4>
-                    <p class="lead">
-                   
-                    
+      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
+ <!-- Map to restaurant Display -->
+ <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="messages-tab">
+    <div class="list-group">
+        <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 id="headerRecipes" class="display-4">Map to <%=rest.name%> </h1>
+                  <h4 class="recipeDisplay">Here's how you get to <%=rest.name%></h4>
+                   <p class="lead">
                         </p>
-                  </div>
-                </div>
-      </div>
+            </div>
+          </div>
   </div>
-  
-      <!-- Restaurant Display  -->
+</div>
+
+      <!-- Restaurant Website Display  -->
       <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
           <div class="list-group">
               <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
                   <div class="container">
                     <h1 id="headerRecipes" class="display-4">Research Assignment: <%=rest.name%> </h1>
-                    <h4 class="recipeDisplay">Check out their website before visiting </h4>
+                    <h4 class="recipeDisplay">Check out their website before dining </h4>
                     <p class="lead">
-                        <a href="<%=rest.url%>"<h1><%=rest.url%></h1></a>
+                     
+                     <a href="<%=rest.url%>"><h1><%=rest.url%></h1></a>
                     
-                  
                     </p>
                   </div>
                 </div>
-      </div>
-  </div>
+        </div>
+    </div>
+
+
+        <!-- Restaurant details -->
+        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="settings-tab">
+            <div id="recipeDisplay">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="container">
+                   
+                    <h4 class="recipeDisplay">Step by step walkthrough video </h4>
+             
+                
+        
+               
+        
+             </div>
+        
+        </div>
+            </div>
+        </div>
+             
+
 </div>
+</div>
+    
 
 <%-include('../partials/footer')%>
 
