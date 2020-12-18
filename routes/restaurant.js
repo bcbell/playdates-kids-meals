@@ -5,4 +5,8 @@ const restCtrl =require('../controllers/restaurants');
 router.get('/', restCtrl.index)
 router.get('/dining', restCtrl.new)
 router.post('/', restCtrl.create)
+router.get('/:id', restCtrl.show)
+
+
+
 module.exports = router;

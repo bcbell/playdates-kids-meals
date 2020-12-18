@@ -4,7 +4,8 @@ const Location = require('../models/location')
 module.exports={
     index,
     new: newAttraction,
-    create
+    create,
+    // show
   
 }
 
@@ -26,3 +27,10 @@ function create(req, res){
      res.redirect('/explorations')   
     })
 }
+// function show(req, res){
+//     Rest.findById(req.params.id)
+//     .then((location)=>{
+//      res.render('locations/onePlace',{ title: `${req.params.id}`, user:req.user, location})   
+//     })
+    
+// }

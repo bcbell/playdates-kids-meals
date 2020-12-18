@@ -3,7 +3,8 @@ const Rest =require('../models/restaurant')
 module.exports={
     index, 
     new : newRestaurant,
-    create
+    create, 
+    show
 }
 
 function index(req, res) {
@@ -25,4 +26,12 @@ function create(req, res){
         res.redirect('/restaurants')
     })
 
+}
+
+function show(req, res){
+    Rest.findById(req.params.id)
+    .then((rest)=>{
+     res.render('eats/rest',{ title: `${req.params.id}`, user:req.user, rest})   
+    })
+    
 }
