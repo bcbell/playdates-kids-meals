@@ -245,16 +245,18 @@ div.tabsEats{
   font-size: 20px;
   background-color: orange;
 }
-#recipesCard{
-  color: black;
+#recipeDisplay{
+  color: #ff1616;
+  background-color: rgb(22, 128, 62);
+}
+#headerRecipes{
+  color: #38b6ff ;
 }
 #recipes{
-  
   margin-top: 10px;
 }
-div.recipeCards{
-  display: flex;
-  justify-content: space-evenly;
+#textRecipes{
+  color:black
 }
 #restaurantCard{
   color: black;
@@ -265,6 +267,13 @@ div.recipeCards{
 div.restaurantsCards{
   display: flex;
   justify-content: space-evenly;
+}
+button.add{
+  background-color: green;
+  color: yellow;
+  font-variant-caps: small-caps ;
+  font-family: 'Architects Daughter', cursive;
+  margin-bottom: 40px;
 }
 /* Locations Page */
 body.locationsPage {

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const locationSchema = new Schema(
+const restSchema = new Schema(
     {
         // id: String,
         name: String,
@@ -10,9 +10,8 @@ const locationSchema = new Schema(
         locality: String,
         city: String,
         zipcode: Number,
+        cuisines: String,
         timings: String,
-        locationType: String,
-        age : Number,
         highlights: String,
         aggregate_rating: Number,
         user: [{type: Schema.Types.ObjectID, ref:'User'}],
@@ -26,4 +25,4 @@ const locationSchema = new Schema(
 
 
 
-module.exports = mongoose.model("Location", locationSchema);
+module.exports = mongoose.model("Rest", restSchema);

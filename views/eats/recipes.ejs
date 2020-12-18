@@ -1,0 +1,25 @@
+<%-include('../partials/header')%>
+<body class="eatsPage">
+    <h1>Ready to add a delicious <%= title %>, <%= user ? user.name : "friend" %>?</h1>
+    
+    <form class="recipeForm" action="eats" method="POST">
+    <label>Dish Name: </label><input type="text" name="title">
+    <!-- Meal Type -->
+    <label>Meal Type:</label>
+    <select name="meal">
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="snack">Snack</option>
+    </select>
+
+    <textarea name="steps" placeholder="Step 1..."></textarea>
+
+ <button type="submit">Submit</button>
+<%-include('../partials/footer')%>
+
+<script>
+    $('.dropdown-toggle').dropdown()
+</script>
+
+</body>

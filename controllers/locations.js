@@ -1,6 +1,7 @@
-
+const axios  = require('axios');
+const Rest =require('../models/restaurant')
 const Location = require('../models/location')
-const { response } = require('../server')
+const response  = require('../server')
 
 module.exports={
     index,
