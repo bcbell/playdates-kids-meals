@@ -31,10 +31,8 @@
                     
                     <h4 class="recipeDisplay">Leave a review for the <%=location.placename%></h4>
                     <br>
-                     
-                   
-                     
-                    <form action="/explorartion/<%=location.id%>" method="POST">
+                             
+                    <form action="/explorations" method="POST">
                       <textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at <%=location.placename%>"></textarea>"
                      <label for="reviewRating">Rating: </label>
                       <input type="checkbox" id="reviewRating" name="rating">

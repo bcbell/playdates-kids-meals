@@ -25,14 +25,14 @@ function create(req, res){
         })
     })
 }
-function create(req, res){
+function create(req, res, next){
     req.body.rating = req.body.rating ==="on" ? true : false
     Location.findById(req.params.id)
     .then((location)=>{
         location.reviews.push(req.body)
         location.save()
         .then(()=>{
-            res.redirect(`/explorations/${location.id}`)
+            res.redirect(`/explorations/${req.params.id}`)
         })
     })
 }
