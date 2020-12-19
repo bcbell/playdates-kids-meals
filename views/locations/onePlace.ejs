@@ -58,16 +58,19 @@
             <div class="container">
               <h1 id="headerRecipes" class="display-4">Reviews for <%=location.placename%> </h1>
                   <h4 class="recipeDisplay">Read about the experiences of other families at <%=location.placename%></h4>
-                   <p class="lead">
-                   <%let total = 0 %>
-                   <% location.reviews.forEach(function(review){%>
-                    <% total += review.rating %>
+                  
+                  <%=location.reviews.content%>
+                  <% location.reviews.forEach(function(review){%>
+                
+                  <div>  
+                   
+                   
                    <p><%=review.rating ?  ' Worth a visit 👍 ': "Probably won't return 👎 " %></p>
-                   <img src="<%=review.locreviewerPhoto%>"><%=review.locreviewer%>
+                   <img src="<%=review.reviewerPhoto%>"><%=review.reviewer%>
                    <p><%=review.content%></p>
 
-                  
-                        </p>
+                  </div>
+                        
                       <% })%>  
             </div>
           </div>
