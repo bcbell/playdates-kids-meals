@@ -1,15 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const reviewSchema= new Schema({
-    reviewer: String,
-    reviewerPhoto: String,
-    rating: Boolean,
-    content: String,
-},{
-    timestamps: true
-})
-
 const eatSchema =new Schema({
     title:String,
     meal: {type:String, enum:['breakfast', 'lunch', 'dinner', 'snack', 'dessert']},
@@ -27,7 +18,6 @@ const eatSchema =new Schema({
             ingredients: Boolean
     },
     user: [{type: Schema.Types.ObjectID, ref:'User'}],
-    reviews: [reviewSchema],
 },{
     timestamps: true,
 }

@@ -10,7 +10,7 @@
     <ul class="nav nav-tabs" id="myTab" role="tablist">
    
       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Map to <%=rest.name%> </a>
+        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Reviews for <%=rest.name%> </a>
       </li>  
   
       <li class="nav-item" role="presentation">
@@ -23,15 +23,31 @@
     
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
- <!-- Map to restaurant Display -->
+ <!-- Reviews for restaurant Display -->
  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="messages-tab">
     <div class="list-group">
         <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 id="headerRecipes" class="display-4">Map to <%=rest.name%> </h1>
-                  <h4 class="recipeDisplay">Here's how you get to <%=rest.name%></h4>
+              <h1 id="headerRecipes" class="display-4">Reviews for<%=rest.name%> </h1>
+                  <h4 class="recipeDisplay">Here's what other families had to say about the <%=rest.name%></h4>
                    <p class="lead">
-                        </p>
+
+                    <p class="lead">
+
+                      <%if (rest.reviews.length){%> 
+                   
+                        <% rest.reviews.forEach(function(rev){%>
+                         
+                                  <h1><%rev.rating%></h1>
+                                                       <%})%>  
+                    
+                    
+                                     <%} else {%>
+                             <br><h5 class="reviews"> Be the first to review  </h5> 
+                             <%}%>
+                          </p>
+
+
             </div>
           </div>
   </div>
@@ -49,6 +65,7 @@
                      <a href="<%=rest.url%>"><h1><%=rest.url%></h1></a>
                     
                     </p>
+               
                   </div>
                 </div>
         </div>
@@ -61,11 +78,20 @@
             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="container">
                    
-                    <h4 class="recipeDisplay">Step by step walkthrough video </h4>
-             
+                  <h1 id="headerRecipes" class="display-4"> <%=rest.name%> </h1>
+                    <h4 class="recipeDisplay">Interested in trying out the <%=rest.name%>? Details below: </h4>
+
+                    <h5>Address: <%=rest.address%></h5>
+                    <br>
+                    
+                  
+                   
                 
         
-               
+                    <h4 class="recipeDisplay">Wanna review <%=rest.name%>?  </h4>
+                    <a href= <button>Review Here</button>
+                     
+                    <br>
         
              </div>
         

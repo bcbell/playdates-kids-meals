@@ -7,10 +7,6 @@
 <div class= "tabsEats">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
     
-  
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Video: How to cook <%=eats.title%> </a>
-      </li>    
       <li class="nav-item" role="presentation">
         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%=eats.title%> Grocery Guide</a>
       </li> 
@@ -51,31 +47,6 @@
                 </div>
         </div>
     </div>
-  <!-- To recipe video -->
-<div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-    <div id="recipeDisplay">
-    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <div class="container">
-            <h1 id="headerRecipes" class="display-4">Video: How to cook <%eats.title%></h1>
-            <h4 class="recipeDisplay">Step by step walkthrough video </h4>
-            <p>
-                <form action="/eats/<%=eats._id%>" method="POST">
-                <input type="search" name="video">
-                <button type="submit">YouTube</button>
-                </form>
-            </p>
-            <p>
-            
-            </p>
-        
-
-       
-
-     </div>
-
-</div>
-    </div>
-</div>
 </div>
 </div>
     

@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const restSchema = new Schema(
     {
-        // id: String,
         name: String,
         url: String,
         address: String,
@@ -14,8 +13,9 @@ const restSchema = new Schema(
         timings: String,
         highlights: String,
         aggregate_rating: Number,
-        user: [{type: Schema.Types.ObjectID, ref:'User'}],
-        location:  [{type: Schema.Types.ObjectId, ref: 'location'}],
+        user: [{type: Schema.Types.ObjectId, ref:'User'}],
+        location:  [{type: Schema.Types.ObjectId, ref: 'Location'}], 
+        reviews: [{type: Schema.Types.ObjectId, ref: 'Review'}],
 
       },
       {

@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const reviewSchema= new Schema({
   reviewer: String,
   reviewerPhoto: String,
-  rating: Boolean,
+  rating: {type: String, enum: ['Would recommend', 'May visit again', 'Would not recommend']},
   content: String,
 },{
   timestamps: true
@@ -13,7 +13,7 @@ const reviewSchema= new Schema({
 const locationSchema = new Schema(
     {
         placename: String,
-        placeurl: String,
+        placeurl:  String,
         placeaddress: String,
         placelocality: String,
         placecity: String,
@@ -23,10 +23,10 @@ const locationSchema = new Schema(
         age : Number,
         highlights: String,
         aggregate_rating: Number,
-        user: [{type: Schema.Types.ObjectID, ref:'User'}],
-         reviews: [reviewSchema],restaurants:  [{type: Schema.Types.ObjectId, ref: 'Rest'}],
+        reviews: [reviewSchema],
+        user: [{type: Schema.Types.ObjectId, ref:'User'}],
+        restaurants:  [{type: Schema.Types.ObjectId, ref: 'Rest'}],
        
-
       },
       {
         timestamps: true,
