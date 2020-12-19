@@ -2,7 +2,7 @@
 <body class="eatsPage">
     <h1>Ready to add a delicious <%= title %>, <%= user ? user.name : "friend" %>?</h1>
     
-    <form class="recipeForm" action="eats" method="POST">
+    <form class="recipeForm" action="/eats" method="POST">
     <label>Dish Name: </label><input type="text" name="title">
     <!-- Meal Type -->
     <label>Meal Type:</label>
@@ -16,7 +16,7 @@
     <textarea name="steps" placeholder="Step 1..."></textarea>
 
  <button type="submit">Submit</button>
- </form>
+
 <%-include('../partials/footer')%>
 
 <script>

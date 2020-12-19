@@ -1,15 +1,14 @@
 const axios  = require('axios');
 const Eat =require('../models/eat')
-const Rest = require('../models/restaurant')
 
-// const User =require('../models/account')
 
 module.exports={
     index,
     new: newRecipe, 
     create,
-    show
-}
+    show,
+   
+}   
 
 function index(req, res) {
     Eat.find({})
@@ -39,3 +38,5 @@ function show(req, res){
     })
     
 }
+
+

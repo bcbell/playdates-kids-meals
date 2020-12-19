@@ -1,14 +1,18 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const replySchema = new Schema({
+  postedBy : String,
+  avatar: String,
+  message: String
+})
+
 const messageSchema = new Schema(
     {
-        location: String,
-        email: String,
-        avatar: String,
-        googleId: String,
-        bio: String,
-
+      postedBy: String,  
+      avatar: String,
+      title: String,
+      replies: [replySchema]
       },
       {
         timestamps: true,

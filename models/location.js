@@ -1,9 +1,17 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const reviewSchema= new Schema({
+  reviewer: String,
+  reviewerPhoto: String,
+  rating: Boolean,
+  content: String,
+},{
+  timestamps: true
+})
+
 const locationSchema = new Schema(
     {
-        // id: String,
         placename: String,
         placeurl: String,
         placeaddress: String,
@@ -16,7 +24,8 @@ const locationSchema = new Schema(
         highlights: String,
         aggregate_rating: Number,
         user: [{type: Schema.Types.ObjectID, ref:'User'}],
-        restaurants:  [{type: Schema.Types.ObjectId, ref: 'Rest'}],
+         reviews: [reviewSchema],restaurants:  [{type: Schema.Types.ObjectId, ref: 'Rest'}],
+       
 
       },
       {

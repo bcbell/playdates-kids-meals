@@ -3,18 +3,17 @@
 <body class="eatsPage">
  <h1>Hey, <%= user ? user.name : "friend" %> let's try this <%= title %> !</h1>
 
-<h1><%=location.placename%></h1>
-<a href="<%=location.placeurl%>"><h1><%=location.placeurl%></h1></a>
+
 
 <div class= "tabsEats">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
    
       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Map to <%=location.placename%> </a>
+        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Reviews for <%=location.placename%> </a>
       </li>  
   
       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%=location.placename%>Website</a>
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%=location.placename%> Website</a>
       </li> 
           <li class="nav-item" role="presentation">
         <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Experience <%=location.placename%> </a>
@@ -23,15 +22,55 @@
     
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
- <!-- Map to restaurant Display -->
+
+          <!-- Location details -->
+          <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="settings-tab">
+            <div id="recipeDisplay">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="container">
+                    
+                    <h4 class="recipeDisplay">Leave a review for the <%=location.placename%></h4>
+                    <br>
+                     
+                   
+                     
+                    <form action="/explorartion/<%=location.id%>" method="POST">
+                      <textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at <%=location.placename%>"></textarea>"
+                     <label for="reviewRating">Rating: </label>
+                      <input type="checkbox" id="reviewRating" name="rating">
+                      
+                      <input type="text" hidden name="reviewer" value="<%= location.user.name %>">
+                      <input type="text" hidden  name="reviewerPhoto" value="<%= location.user.avatar %>"> 
+
+                    
+          
+                      <button type="submit">Submit Review</button>
+                      </form>
+        
+             </div>
+        
+        </div>
+            </div>
+        </div>
+             
+ <!-- Review for location -->
  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="messages-tab">
     <div class="list-group">
         <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 id="headerRecipes" class="display-4">Map to <%=location.placename%> </h1>
-                  <h4 class="recipeDisplay">Here's how you get to <%=location.placename%></h4>
+              <h1 id="headerRecipes" class="display-4">Reviews for <%=location.placename%> </h1>
+                  <h4 class="recipeDisplay">Read about the experiences of other families at <%=location.placename%></h4>
                    <p class="lead">
+                   <%let total = 0 %>
+                   <% location.reviews.forEach(function(review){%>
+                    <% total += review.rating %>
+                   <p><%=review.rating ?  ' Worth a visit 👍 ': "Probably won't return 👎 " %></p>
+                   <img src="<%=review.locreviewerPhoto%>"><%=review.locreviewer%>
+                   <p><%=review.content%></p>
+
+                  
                         </p>
+                      <% })%>  
             </div>
           </div>
   </div>
@@ -55,24 +94,7 @@
     </div>
 
 
-        <!-- Restaurant details -->
-        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="settings-tab">
-            <div id="recipeDisplay">
-            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="container">
-                   
-                    <h4 class="recipeDisplay">Step by step walkthrough video </h4>
-             
-                
-        
-               
-        
-             </div>
-        
-        </div>
-            </div>
-        </div>
-             
+    
 
 </div>
 </div>
