@@ -278,6 +278,11 @@ body.eatsPage {
   color: white;
   background-color:  #38b6ff;
   font-variant-caps: small-caps ;
+  background-image: url(https://i.imgur.com/67nr45B.png);
+}
+#myTable2{
+  color: white;
+  
 }
 div.tabsEats{
   margin-top: 50px;

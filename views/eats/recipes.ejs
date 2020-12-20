@@ -2,20 +2,132 @@
 <body class="eatsPage">
     <h1>Ready to add a delicious <%= title %>, <%= user ? user.name : "friend" %>?</h1>
     
-    <form class="recipeForm" action="/eats" method="POST">
-    <label>Dish Name: </label><input type="text" name="title">
-    <!-- Meal Type -->
-    <label>Meal Type:</label>
-    <select name="meal">
-        <option value="breakfast">Breakfast</option>
-        <option value="lunch">Lunch</option>
-        <option value="dinner">Dinner</option>
-        <option value="snack">Snack</option>
-    </select>
+    <form class="recipeForm" action="/eats" class="row g-3" method="POST">
+ 
+ <form class="recipeForm" action="/eats" class="row g-3" method="POST">
+   <div class="recipeForm">
+    <div >
+        <label for="inputEmail4" class="form-label">Dish Name</label>
+        <input type="text" class="form-control" name="title" id="inputEmail4">
+      </div>
+      <br>
+      <div >
+        <label>Meal Type:</label>
+        <select name="meal">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snack</option>
+            <option value='dessert'>Dessert</option>
+        </select>
+    </div>     
+     <div>
+    <label>Cuisine Type:</label>
+     <select name="cuisineType"> 
+        <option value="african">African</option> 
+        <option value="american">American </option>
+         <option value="americanChinese">American Chinese</option>
+         <option value="brazilian">Brazilian</option>
+         <option value="caribbean">Caribbean</option>
+         <option value="cajun">Cajun</option>
+         <option value="cuban">Cuban</option>
+         <option value="french">French</option>
+         <option value="german">German</option>
+         <option value="greek">Greek</option>
+         <option value="indian">Indian</option>
+         <option value="indigenous">Indigenous</option>
+         <option value="Italian">Italian</option>
+         <option value="japanese">Japanese</option>
+         <option value="korean">Korean</option>
+         <option value="mediterranean">Mediterranean</option>
+         <option value="mexican">Mexican</option>
+         <option value="moroccan">Moroccan</option>
+         <option value="soul-food">Soul Food</option>
+         <option value="southern">Southern</option>
+         <option value="thai">Thai</option>
+         <option value="vegetarian">Vegetarian</option>
+         <option value='vietnamese'>Vietnamese</option>
+     </select>
+     </div>
+     <div>
+         <label>Dish Category:</label>
+        <select name="dish">
+            <option value="appetizer">Appetizer</option>
+             <option value='dessert'>Dessert</option>
+             <option value="main">Main Course</option>
+            <option value="salad">Salad</option>
+            <option value='side'>Side Dish</option>
+            <option value="soup">Soup</option> 
+        </select>
+     </div>
+     <div>
+         <label>Food Allergies:</label>
+         <select name="health">
+             <option value="dairyFree">Dairy (Lactose) Free</option>
+            <option value="eggFree">Egg Free</option>
+            <option value="glutenfree">Gluten Free</option>
+            <option value="peanutfree">Peanut-Free</option>
+            <option value="seafoodfree">Seafood-Free</option>
+            <option value="shellfishFree">Shellfish Free</option>
+            <option value="soy"> Soy-Free</option>
+            <option value="treenut">Tree-Nut Feee</option> 
+            
+         </select>
+     </div>
+     <div> 
+         <label>Dietary Plan:</label>
+         <select name="diet">
+             <option value="balanced">Balanced</option>
+             <option value="gluten">Gluten</option>
+             <option value="halal">Halal</option>
+             <option value="highFiber">High-Fiber</option>
+             <option value="highProtein">High-Protein</option>
+             <option value="kosher">Kosher</option>
+             <option value='lowCarb'>Low-Carb</option>
+             <option value="lowFat">Low-Fat</option>
+             <option value="lowSodium">Low-Sodium</option>
+             <option value="paleo">Paleo</option>
+             <option value="sugar">Sugar-Free</option>
+             <option value='vegetarian'>Vegetarian</option>
+             <option value="vegan">Vegan</option>
+         </select>
+     </div>
+     <div>
+         <label>Recipe</label>
+     </div>
+     <div>
+         <label>Descripton:</label>
+         <textarea name="description" cols="150" placeholder="Lemon custard french toast is an delicious breakfast treat that your kids will love!"></textarea>
+     </div>
+        <label>Prep Time:</label>
+        <input type="text" name="prep" placeholder="20 minutes">
+        <label>Cook Time:</label>
+        <input type="text" name="cookTime" placeholder="55 minutes">
+        <label>Serves:</label>
+        <input type="number" name="serves" placeholder="4">
+     <div>
+         <label>Ingredients:</label>
+         <textarea name="ingredients" cols="150"  placeholder="1 tbsp vegetable oil..."></textarea>
+     </div>
+     <div>
+      <label>Directions:</label>
+      <textarea name="recipe" placeholder="Step 1 ..." cols="150"></textarea>
+    </div>
+    <div>
+        <label>Link to Recipe or Video:</label>
+        <input type="url" name="url" placeholder="http://youtube.com/">
+    </div>
+    <div>
+        
+    </div>
 
-    <textarea name="steps" placeholder="Step 1..."></textarea>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
 
- <button type="submit">Submit</button>
+ 
 
 <%-include('../partials/footer')%>
 
