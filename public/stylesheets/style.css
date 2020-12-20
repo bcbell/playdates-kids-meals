@@ -163,17 +163,25 @@ body.accountPage {
   margin-top: 50px;
   border: 4px solid white;
 }
-#profilePicture{
+/* #profilePicture{
   border-right: 4px solid white;
   padding-right: 230px; 
   
-}
+} */
 #profileInfo{
   display: flex;
   justify-content: left;
   align-items: center;
   margin-right: 200px;
-
+}
+#updateRadios{
+  margin-left: 70px;
+  margin-bottom: 25px;
+}
+table.profileTable{
+  margin-left: 70px;
+  margin-bottom: 25px;
+  
 }
 #formAccount{
   display: flex;
@@ -184,17 +192,17 @@ body.accountPage {
 }
 button.playground{
   margin-right: 40px;
-  background-color: red;
+  /* background-color: red;
   color: yellow;
   font-family: 'Poppins', sans-serif;
   font-variant-caps: small-caps ;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 10px; */
 }
 body.accountPage h4{
   color: yellow;
 }
-button.accountPage{
+/* button.accountPage{
   margin-left: 50px;
   padding: 10px;
   border-radius: 10px;
@@ -202,7 +210,32 @@ button.accountPage{
   color: yellow;
   font-family: 'Poppins', sans-serif;
   font-variant-caps: small-caps ;
-} 
+}  */
+#updateButton{
+  margin-bottom: 20px;
+  margin-right: 40px;
+  
+}
+#updateButton, #updateReturn, button.playground, button.accountPage:hover {
+  padding: 15px 25px;
+  font-size: 20px;
+  color: yellow;
+  background-color: red;
+  border-radius: 15px;
+  box-shadow: 0 9px #999999;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Architects Daughter', cursive;
+  font-variant-caps: small-caps ;
+}
+#updateButton, #updateReturn, button.playground, button.accountPage:active {
+background-color: green;
+box-shadow: 0 10px #666666;
+transform: translateY(10px);
+}
+#updateReturn{
+  margin-bottom: 30px;
+}
 
 a.googleAccount{
   display: flex;
@@ -226,8 +259,14 @@ div.play{
 }
 h4.bio{
  font-display: inline-block;
+ margin-left: 70px;
 }
-
+h5.bio{
+  margin-left: 70px;
+}
+textarea.bio{
+  margin-left: 70px;
+}
 /* Eats Page */
 body.eatsPage {
   font-family: 'Poppins', sans-serif;

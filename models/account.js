@@ -11,7 +11,7 @@ const userSchema = new Schema(
     locality: String,
     state: String,
     bio: String,
-    parent: Boolean
+    parent: {type: String, enum:['Parent', 'Grandparent', 'Foster Parent', 'Adoptive Parent', 'Guardianship', 'Babysitter', 'Nanny','Other']}
   },
   {
     timestamps: true,

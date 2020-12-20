@@ -17,6 +17,7 @@ function index(req, res) {
     });
   }
 function show (req, res){
+    
     User. findById(req.params.id)
     .then((users)=>{
         res.render('users/account', {title: 'Account Details', user:req.user, users})

@@ -27,7 +27,6 @@ const eatsRouter = require('./routes/eats');
 const locationsRouter = require('./routes/locations')
 const messagesRouter = require('./routes/messages')
 const aboutRouter = require('./routes/about')
-const contactRouter = require('./routes/contact')
 const restaurantRouter =require('./routes/restaurant')
 const reviewsRouter = require('./routes/reviews')
 
@@ -70,7 +69,6 @@ app.use('/explorations', locationsRouter);
 app.use('/messageboard', messagesRouter);
 app.use('/reviews', reviewsRouter)
 app.use('/company', aboutRouter);
-app.use('/help', contactRouter)
 app.use('/restaurants', restaurantRouter);
 
 

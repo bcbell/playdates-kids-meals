@@ -9,31 +9,62 @@
 <form class="acccountUpdate" method="POST" action="/playground/<%=users._id%>?_method=PUT">
    <div id="formAccount">
     <div id="profilePicture">
-        <img id="profilePic" height="200"  src="<%=users.avatar ? users.avatar : 'https://i.imgur.com/VgK9N5f.png' %>"><br>
-        <button class= "accountPage" type="submit" >Update Profile</button>
+        <img id="profilePic" height="200"  src="<%=users.avatar ? users.avatar : 'https://i.imgur.com/VgK9N5f.png' %>"><br>  <h4>Joined:</h4><h5><%= users.createdAt.toLocaleString().split(',')[0]%></h5><br>
+        
     </div>
    <div id="profileInfo">
         <div id="profile">
-            <h2>Profile:</h2><h4><%=users.name%></h4>
-            <h2>Email:</h2><h4><%=users.email%></h4>
-            <input type="email" name="email" value="<%=users.email%>">
-            <h2>Phone Number:</h2><h4><%=users.phone%></h4>
-            <input type="tel" name="phone" value="<%=users.phone%>">
-            <h2>Closest City:</h2><h4><%=users.locality%></h4>
-            <input type="text" name="locality" value="<%=users.locality%>">
-            <h2>State:</h2><h4><%=users.state%></h4>
-            <input type="text" name="state" value="<%=users.state%>">
-            <h2>Joined:</h2><h4><%= users.createdAt.toLocaleString().split(',')[0]%></h4>
+           <h3>Profile:</h3><h4><%=users.name%></h4><br>
+
+        <div id="updateRadios">
+            <input type="radio" name="parent" value="Parent"> Parent
+            <input value="Grandparent" name="parent" type="radio">Grandparent
+            <input value="Foster Parent" name="parent" type="radio">Foster Parent
+            <input type="radio" value="Adoptive Parent " name="Parent"> Adoptive Parent
+            <input value="Guardianship" name="parent" type="radio">Guardianship
+            <input value="Babysitter" name="parent" type="radio">Babysitter
+            <input value="Nanny" name="parent" type="radio">Nanny
+            <input value="Other" name="parent" type="radio">Other
+        </div>
+         
+            <table class="profileTable">
+                <thead>
+                <tr>
+                    <th><h4>Email:</h4></th>
+                    <th><h4>Phone Number: </h4></th>
+                    <th><h4>Closest City:</h4></th>
+                    <th><h4>State: </h4></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%=users.email%> (Current)</td>
+                    <td><%=users.phone%> (Current)</td>
+                    <td><%=users.locality%> (Current)</td>
+                    <td><%=users.state%> (Current)</td>
+
+                </tr>
+                <tr>
+                    <td><input type="email" name="email" value="<%=users.email%>"></td>
+                    <td><input type="tel" name="phone" value="<%=users.phone%>"></td>
+                    <td><input type="text" name="locality" value="<%=users.locality%>"></td>
+                    <td><input type="text" name="state" value="<%=users.state%>"></td>
+                </tr>
+            </tbody>   
+            </table>
+            
             <br>
-                <h2>About You:</h2><h4 class="bio" ><%=users.bio%></h3>
-            <textarea rows="4" name="bio"><%=users.bio%></textarea> 
+              
+            <h4 class="bio">About You:</h4>  <h5 class="bio"><%=users.bio%></h5>
+            <textarea class= "bio" rows="4" cols="50px" name="bio"><%=users.bio%></textarea>
         
        
     </div>
 </div>
 </div>
+    <button class= "accountPage" id= "updateButton" type="submit" >Update Profile</button>
 </form>
-<a href="/playground/<%=users._id%>"><button class="playground">Account Details</button></a>
+<a href="/playground/<%=users._id%>"><button id="updateReturn" class="playground">Account Details</button></a>
 </body>
  
 
