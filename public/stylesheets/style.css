@@ -297,9 +297,8 @@ button.recipeBtn{
   padding: 10px;
   margin-top: 15px;
 }
-#recipeDisplay{
-  color: #ff1616;
-  background-color: rgb(22, 128, 62);
+p.recipeAdd{
+  margin-top: 25px;
 }
 #headerRecipes{
   color: #38b6ff ;

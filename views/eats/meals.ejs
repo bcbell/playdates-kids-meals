@@ -8,7 +8,7 @@
  table {
    border-spacing: 0;
    width: 100%;
-   border: 1px solid green;
+   border: 10px solid green;
  }
  
  th {
@@ -21,7 +21,7 @@
  }
  
  tr:nth-child(even) {
-   background-color: #38b6ff
+   background-color: orange
  }
  </style>
  </head>
@@ -54,34 +54,7 @@
         <%})%>   
      
    </tr>
-   <tr>
-     <td>North/South</td>
-     <td>UK</td>
-   </tr>
-   <tr>
-     <td>Alfreds Futterkiste</td>
-     <td>Germany</td>
-   </tr>
-   <tr>
-     <td>Koniglich Essen</td>
-     <td>Germany</td>
-   </tr>
-   <tr>
-     <td>Magazzini Alimentari Riuniti</td>
-     <td>Italy</td>
-   </tr>
-   <tr>
-     <td>Paris specialites</td>
-     <td>France</td>
-   </tr>
-   <tr>
-     <td>Island Trading</td>
-     <td>UK</td>
-   </tr>
-   <tr>
-     <td>Laughing Bacchus Winecellars</td>
-     <td>Canada</td>
-   </tr>
+ 
  </table>
  
  <script>
@@ -154,66 +127,21 @@
 
 
 
-<!-- <div class= "tabsEats">
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-  
 
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Restaurant & Meal Recommendations</a>
-    </li>    
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Kids-Friendly Restaurants</a>
-    </li> 
-     <li class="nav-item" role="presentation">
-      <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="true">Kid-Friendly Meals</a>
-    </li>
-  </ul>
-  
-  <div class="tab-content">
-    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
-    <!-- Kid  Meals Recipe Display -->
-    <!-- <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-        <div class="list-group">
-            <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 id="headerRecipes" class="display-4">The Blackboard of Meals</h1>
-                      <h4 class="recipeDisplay">Would the kiddos enjoy?</h4>
-                  <p class="lead"><% eats.forEach(function(eat){ %> 
+                  <!-- <p class="lead"><% eats.forEach(function(eat){ %> 
                     <a href="eats/<%=eat._id%>" ><h2><%=eat.title%></h2></a>
                   
                       <%})%>   </p>
-                </div>
-              </div>
-    </div>
-</div>
+                </div> -->
 
-    <!-- Kid-Friendly Restaurant Display  -->
-    <!-- <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div class="list-group">
-            <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 id="headerRecipes" class="display-4">The Restaurant Blackboard</h1>
-                  <h4 class="recipeDisplay">Click below to check out family approved restaurants </h4>
-                  <p class="lead">
-                    <a href="/restaurants" ><button>Family Approved Restaurants</button></a>
-                  
-                  </p>
-                </div>
-              </div>
-    </div>
-</div> -->
-  
-<!-- To add a recipe or restaurant -->
-    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
            <% if (user) {%>
-         </h4><h3><p> Will you be adding a kid-friendly restaurant or recipe? </p></h3><br>
-            <a href="/restaurants/dining"><button class="add">Add Restaurant</button></a><a href="eats/recipes"><button class="add">Add Recipe</button></a><br>
+         
+         
 
             <%} else{%>
-            <span ><h4>Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</span>
+       
 
-           <%= user ? user.name : "friend" %> <p class="mealsLogin">Login in below,  to a add your recommendation to the list!</p>
+         <p class="recipeAdd">Login in below,  to a add your recommendation to the list!</p>
 
             <div class="loginAccount">
                 <a id="google" class="googleAccount" href="/auth/google">
@@ -221,8 +149,7 @@
          <%}%>
         </div>
     </div>
-  </div>
-</div> --> -->
+ 
 
 <%-include('../partials/footer')%>
 
