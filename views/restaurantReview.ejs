@@ -4,18 +4,12 @@
      <p>
                  
                                
-                      <form action="/explorations" method="POST">
+                      <form action="/explorations/<%=location._id%>" method="POST">
                         <textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at "></textarea> <br>
                         <label for="reviewRating">Rating: </label>
                         <input type="radio" id="reviewRating" name="rating" value="Would recomment">Would highly recommend 👍  
                         <input type="radio" id="reviewRating" name="rating" value="May visit again">Would consider going back 
                         <input type="radio" id="reviewRating" name="rating" value="Would not recommend">Would not recommend 👎 <br>
-                        
-                        <input type="text" hidden name="reviewer" value="<%=user%>">
-                      
-  
-                      
-            
                         <button type="submit">Submit Review</button>
                         </form>
           

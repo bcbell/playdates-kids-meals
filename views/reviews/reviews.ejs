@@ -1,0 +1,71 @@
+<%-include('../partials/header')%>
+<body class="eatsPage">
+
+     <p>
+                 
+                               
+                      <form action="/reviews" method="POST">
+                        <textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at "></textarea> <br>
+                        <label for="reviewRating">Rating: </label>
+                        <input type="radio" id="reviewRating" name="rating" value="Would recomment">Would highly recommend 👍  
+                        <input type="radio" id="reviewRating" name="rating" value="May visit again">Would consider going back 
+                        <input type="radio" id="reviewRating" name="rating" value="Would not recommend">Would not recommend 👎 <br>
+                        <button type="submit">Submit Review</button>
+                        </form>
+          
+
+                    </p>
+
+                    <h1 id="headerRecipes" class="display-4">Reviews for </h1>
+                    <h4 class="recipeDisplay">Read about the experiences of other families at , wanna share your experience? Leave a review below: </h4>
+              
+                <br>
+                         
+                <form action="/reviews " method="POST">
+                  <textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at "></textarea> <br>
+                  <label for="reviewRating">Rating: </label>
+                  <input type="radio" id="reviewRating" name="rating" value="Would recomment">Would highly recommend 👍  
+                  <input type="radio" id="reviewRating" name="rating" value="May visit again">Would consider going back 
+                  <input type="radio" id="reviewRating" name="rating" value="Would not recommend">Would not recommend 👎 <br>
+                  
+
+                
+      
+                  <button type="submit">Submit Review</button>
+                  </form>
+    
+
+
+                      <%if (reviews.length){%>
+                   
+                      <%reviews.forEach((review) =>{%> 
+                     
+                        <div class="reviewLocation">
+                           
+                            <%=review.title%>
+                          <h2><%=review.postedBy%></h2>
+                         <h2><%=review.avatar%></h2> 
+                         <h1><%=review.content%></h1> 
+                         <h2><%=review.rating%></h2> 
+                        
+
+                        </div>
+                      <%})%>
+                   <%} else {%>
+           <br><h5 class="reviews"> Be the first to review  </h5> 
+           <%}%>
+         </div>
+
+
+<%-include('../partials/footer')%>
+
+<script>
+    $('.dropdown-toggle').dropdown()
+</script>
+<script>
+    $(function () {
+      $('#myTab li:last-child a').tab('show')
+    })
+  </script>
+
+</body>
