@@ -10,9 +10,8 @@ __DEMO__
 
 For demo, visit http://kidsmeals.herokuapp.com/
 
-__APIs__
- 
 
+ 
 
 __Views__
 1. HTML Boilerplate
@@ -22,11 +21,10 @@ __Views__
    - [x ] Video (non-user)
    - [ ] Cards (users)
 5. Kid-Friendly Dining & Meals
-   - [ ] Google Maps & YouTube (N/A)
    - [ x] List of recipes and restaurants
    - [x ] Able to view individual recipes and restaurants
    - [x ] Able to add recipes and restaurants (users)
-   - [ ] Reviews
+   - [x ] Reviews
    - [ ] Search capabilities
 6. Kid-Friendly Explorations & Experiences
    - [ ] Google Maps (N/A)
@@ -36,17 +34,14 @@ __Views__
    - [ ] Reviews
    - [ ] Search capabilities
 7.  Family Q & A Board
-   - [ ] 
-   - [ ] 
+   - [x ] Message Board Completed
+   - [x ] Users are able to send and reply to messages
 8. About Us
    - [ x] Added an About Page
 9. Account Settings
    - [ x] Users can view other users
    - [ x] Users can view their individual account
    - [x ] Users can update and delete their account
-10. Contact Us
-   - [ x] Contact Form
-   - [ ] 
    
 __Models__
 1. Schema
@@ -55,7 +50,7 @@ __Models__
 __Controllers__
 1. Controllers created 
    - [ x] Controllers create for Accounts (user), Eats (dining & meals), locations (explorations & experiences), Messages (message board)
-   - [ ] 
+  
 __Routers__
 1. Routers created and provided 
    - [x ] Router provided for index(home) view
@@ -66,7 +61,7 @@ Objective- Design a app that is clean yet functional.
 1. Body
    - [ x  ] Setup a  display
    - [ x ]  Set background color #38b6ff (light blue)
-   - [  ]  Center body 
+   - [ x ]  Center body 
 2.  Header
     - [ x ] Set logo on left
     - [ x ] Set login/logout image and text on right
@@ -91,7 +86,7 @@ __Premlinary Planning__
    - [ x ] Fonts- Poppins Light & Architects Daughter
    - [ ]  Colors- Light blue (#38b6ff), Bright red (#ff1616), green(#578e44), grey (#607d8b), turquoise blue (#5ce1e6), black( #000000)
    - [ x ]  Background Image ![Image](https://i.imgur.com/ctuJbvw.png)
-   - [ ]  
+    
  2. Nav Bar 
    - [x ] Logo (Left)
    - [x ] Links- Home, Play & Explore (Attractions), Eat (Food/Restaurants), Experience (Events- goal), Playroom (Board) (Left)
@@ -118,6 +113,9 @@ __Final__
 __Future Enhancements__
 
 1. Include chat functionality
+2. Include Google Maps & YouTube 
+3. Contact Us Form
+4. Search functionality
 
    
 
@@ -127,11 +125,9 @@ __List of Technologies Used:__
 - JavaScript
 - BootStrap
 - Postman
-- APIs (listed above)
 - Google Fonts
 - Wireframe
 - Canva
 - Imgur
-- YouTube
 - Favicon
 - Heroku
