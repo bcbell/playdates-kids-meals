@@ -234,6 +234,7 @@ button.deletePage{
 background-color: green;
 box-shadow: 0 10px #666666;
 transform: translateY(5px);
+outline: none;
 }
 #updateReturn{
   margin-bottom: 30px;
@@ -291,6 +292,10 @@ div.tabsEats{
   cursor: pointer;
   font-size: 20px;
   background-color: orange;
+}
+button.recipeBtn{
+  padding: 10px;
+  margin-top: 15px;
 }
 #recipeDisplay{
   color: #ff1616;

@@ -15,6 +15,7 @@ const eatSchema =new Schema({
     cookTime: String,
     serves: Number,
     descripton: String,
+    postedBy: String,
     user: [{type: Schema.Types.ObjectID, ref:'User'}],
 },{
     timestamps: true,

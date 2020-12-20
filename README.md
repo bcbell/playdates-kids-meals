@@ -131,3 +131,4 @@ __List of Technologies Used:__
 - Imgur
 - Favicon
 - Heroku
+- W3School
