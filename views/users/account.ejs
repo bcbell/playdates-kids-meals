@@ -11,7 +11,7 @@
         <img id="profilePic" height="200"  src="<%=users.avatar ? users.avatar : 'https://i.imgur.com/VgK9N5f.png' %>"><br><h4 class="account"><%=users.parent%></h4>
      
         <form method="POST" action="/playground/<%=users._id%>?_method=DELETE">
-          <div class="account"><button id="delete" class= "accountPage" type="submit" >Delete Account</button></div> 
+          <div class="account"><button  class= "deletePage" type="submit" >Delete Account</button></div> 
         </form>
    </div>
 
@@ -46,7 +46,7 @@
  
 </div >
 <div class="buttonAccount">
-<a href="/playground"><button id="back" class="playground">Back</button></a>
+<a href="/playground"><button id="updateButton" class="accountPage">Back</button></a>
 
 <%if(user){%>  
     
