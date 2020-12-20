@@ -5,11 +5,23 @@
  <h1 class="homePage">hello, <%= user ? user.name : "friend" %>!</h1>
  
 
+ <form action="/messageboard" method="POST">
+    <div class="form-group">
+      <input type="text" class="form-control" aria-describedby="message" name="title" placeholder="Enter message...">
+    </div>
+    <button type="submit" class="btn btn-success">Create Post</button>
+  </form>
+ 
 
+ <% messages.forEach(message=>{%>
+   <div class="messageboard"> 
+       <%=message.postedBy%><br><img id="avatarPhoto" src="<%=message.avatar%>"> <div><h3><%=message.title%></h3><%=message.createdAt.toLocaleString()%></div>
+   <form action="/messageboard/<%=message._id%>" method="GET">
+    <button type="submit">See Post</button>
+</form>
+   </div>
 
-
-
-
+ <%})%>
 
 
 

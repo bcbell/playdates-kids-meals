@@ -1,8 +1,7 @@
 const router =require('express').Router();
 const reviewCtrl= require('../controllers/reviews');
 
-router.get('explorations/reviews', reviewCtrl.new)
-router.post('/explorations', reviewCtrl.create)
+router.post('/explorations', reviewCtrl.addReview)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

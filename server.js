@@ -18,6 +18,7 @@ require("./config/database");
 // load passport
 require("./config/passport");
 
+
 // require routes
 const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
@@ -56,6 +57,8 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 
 // router middleware

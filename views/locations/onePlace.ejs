@@ -16,7 +16,7 @@
         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%=location.placename%> Website</a>
       </li> 
           <li class="nav-item" role="presentation">
-        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Experience <%=location.placename%> </a>
+        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false"><%=location.placename%> </a>
       </li> 
     </ul>
     
@@ -24,24 +24,23 @@
       <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
 
           <!-- Location details -->
-          <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="settings-tab">
+          <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
             <div id="recipeDisplay">
             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="container"></div>
                   <div class="container">
                     <h1 id="headerRecipes" class="display-4">Reviews for <%=location.placename%> </h1>
-                        <h4 class="recipeDisplay">Read about the experiences of other families at <%=location.placename%></h4>
-                    <h4 class="recipeDisplay">Leave a review for the <%=location.placename%></h4>
+                        <h4 class="recipeDisplay">Read about the experiences of other families at <%=location.placename%>, wanna share your experience? Leave a review below: </h4>
+                  
                     <br>
                              
-                    <form action="/explorations" method="POST">
+                    <form action="/explorations/ " method="POST">
                       <textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at <%=location.placename%>"></textarea> <br>
                       <label for="reviewRating">Rating: </label>
                       <input type="radio" id="reviewRating" name="rating" value="Would recomment">Would highly recommend 👍  
                       <input type="radio" id="reviewRating" name="rating" value="May visit again">Would consider going back 
                       <input type="radio" id="reviewRating" name="rating" value="Would not recommend">Would not recommend 👎 <br>
-                      
-                      <input type="text" hidden name="reviewer" value="<%=user%>">
+                      <input type="text" hidden name="reviewer"  value="<%=user ? user.name : 'anonymus' %>%>">
                     
 
                     
@@ -51,11 +50,14 @@
         
                       
              
-                       <%if (location.length){%>  
+                        
       
                         
-  
-                       
+                        <h5><%=location.reviews.content%></h5>
+
+
+
+                        <%if (location.length){%>
                        <%} else {%>
                <br><h5 class="reviews"> Be the first to review  </h5> 
                <%}%>
@@ -85,7 +87,7 @@
 
              
  <!-- Review for location -->
- <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="messages-tab">
+ <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
   <div class="list-group">
       <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
           <div class="container">
@@ -99,9 +101,10 @@
 
                 <%if (location.reviews.length){%> 
                  
-    <% location.reviews.forEach(function(review){%>
+    <% location.reviews.forEach(function(r){%>
      
-              <h1><%review.rating%></h1>
+              <h1><%=r.ratings%></h1>
+              
                                    <%})%>  
 
 

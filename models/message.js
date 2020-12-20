@@ -12,7 +12,7 @@ const messageSchema = new Schema(
       postedBy: String,  
       avatar: String,
       title: String,
-      replies: [replySchema]
+      replies: [replySchema],
       },
       {
         timestamps: true,

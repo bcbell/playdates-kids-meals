@@ -1,0 +1,42 @@
+<%-include('../partials/header')%>
+<body class="messagePage">
+ 
+ <h1 class="homePage">hello, <%= user ? user.name : "friend" %>!</h1>
+
+ <h3 class="reply"><%= message.postedBy %>'s Post</h3>
+ 
+
+<div id=send class='messageboard'>
+    <div class="messager"><img id="avatarPhoto" width="40" src="<%= message.avatar %>" alt=""><%= message.postedBy %></div>
+    <div class='message'>
+<%= message.title %>-<%= message.createdAt.toLocaleString()%>
+    </div><br>
+   
+ </div>
+ <div id=reply>
+ <% message.replies.forEach(reply => { %>
+    <%= reply.postedBy %> <img id="avatarPhoto" width="25" src="<%= reply.avatar %>" alt=""> <h6><%= reply.message %> - <%= message.createdAt.toLocaleString()%></div><br>
+ <% }) %>
+
+ <form action="/messageboard/<%= message._id %>" method="POST">
+   <div class="form-group">
+     <input type="text" class="form-control" aria-describedby="message" name="message" placeholder="Enter reply...">
+   </div>
+   <button type="submit" class="btn btn-primary">Reply</button>
+ </form>
+
+
+
+
+
+
+
+
+
+
+<%-include('../partials/footer')%>
+<script>
+    $('.dropdown-toggle').dropdown()
+</script>
+
+</body>
