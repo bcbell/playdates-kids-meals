@@ -6,14 +6,14 @@
 
     <% users.forEach(function(user){%>
      <div class="playground">
-        <ul class="userInfo"><h3 class="playground"><%=user.name%></h3>Playing since <%=user.createdAt.toLocaleString().split(',')[0]%></ul><ul><img height="200" width="200" id=avatar src="<%=user.avatar ? user.avatar :'https://i.imgur.com/VgK9N5f.png' %>"><ul>
+        <h3 class="playground"><%=user.name%></h3><br><img height="200" width="200" id=avatar src="<%=user.avatar ? user.avatar :'https://i.imgur.com/VgK9N5f.png' %>"><ul>Playing since <%=user.createdAt.toLocaleString().split(',')[0]%></ul>
  
    <% })%>
 
-
+</div>
   
  <%-include('../partials/footer')%>
-</div>
+
  <script>
      $('.dropdown-toggle').dropdown()
  </script>
