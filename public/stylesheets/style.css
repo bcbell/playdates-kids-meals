@@ -18,13 +18,11 @@ div.headingText video{
   outline: solid 10px green;
   object-fit: cover;
 }
-#searchBtn{
+div.navbar{
+  margin-top: 10px;
   background-color: green;
-  color: yellow;
 }
-#searchBtn:hover{
-  background-color: #ff1616;
-}
+
 #logout{
   display: flex;
   height: 4em;
@@ -198,7 +196,7 @@ table.profileTable{
   margin-left: 130px;
 }
 div.buttonAccount{
-  margin-bottom: 20px;
+  margin-bottom: 20pxna;
 }
 button.playground{
   margin-right: 40px;
