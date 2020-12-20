@@ -2,40 +2,63 @@
 <body class="accountPage">
  <h1><%= title %></h1>
  
-      
-
- <% if(user){ %> 
-<h1 class="accountPage">hello, <%= user ? user.name : "friend" %>!</h1>
+ <h1 class="accountPage">hello, <%= user ? user.name : "friend" %>!</h1>
     
-        <div id="formAccount">
+<div id="formAccount">
     <div id="profilePicture">
       
-        <img id="profilePic" height="200"  src="<%=users.avatar ? users.avatar : 'https://i.imgur.com/VgK9N5f.png' %>"><br>
+        <h4 class="account">Joined:</h4><div class="account"><%= users.createdAt.toLocaleString().split(',')[0]%></div> 
+        <img id="profilePic" height="200"  src="<%=users.avatar ? users.avatar : 'https://i.imgur.com/VgK9N5f.png' %>"><br><h4 class="account"><%=users.parent%></h4>
      
         <form method="POST" action="/playground/<%=users._id%>?_method=DELETE">
-            <button id="delete" class= "accountPage"type="submit" >Delete Account</button>
+          <div class="account"><button id="delete" class= "accountPage" type="submit" >Delete Account</button></div> 
         </form>
-   
-    </div>
-   <div id="profileInfo">
+   </div>
+
+ <% if(user){ %> 
+  <div id="profileInfo">
         <div id="profile">
-            <h2>Caregiver Type:</h2><h4><%=users.parent%></h4>
-            <h2>Profile:</h2><h4><%=users.name%></h4>
-            <h2>Email:</h2><h4><%=users.email%></h4>
-            <h2>Phone Number:</h2><h4><%=users.phone%></h4>
-            <h2>Closest City:</h2><h4><%=users.locality%></h4>
-            <h2>State:</h2><h4><%=users.state%></h4>
-            <h2>About You:</h2><h4 class="bio"><%=users.bio %></h4>
-            <h2>Joined:</h2><h4><%= users.createdAt.toLocaleString().split(',')[0]%></h4>     
+             <table class="accountTable">
+            <tbody>
+            <tr>
+                <th><h4>Email:</h4><td><%=users.email%></td></th>
+            </tr>
+            <tr>
+                <th><h4>Phone Number: </h4><td><%=users.phone%></td></th>
+            </tr>
+            <tr>
+                <th><h4> Closest City:</h4> <td><%=users.locality%></td></th>
+            </tr>
+            <tr>
+                <th><h4> State: </h4><td><%=users.state%> </td></th>
+            </tr>
+        </tbody>   
+        </table>
+        
+        <br>
+          
+        <h4 class="bio">About You:</h4>  <h5 class="bio"><%=users.bio%></h5>
+       
+     
     </div>
-    
-</div>
 
-</div>
-<a href="/playground"><button id="back" class="playground">Back</button></a> <%if(user){%>  <a  href="/playground/<%=users._id%>/update"><button class= "accountPage" id="updateButton" type="submit" >Update Account</button></a> <%} else{%> <%}%>
+    </div>
  
+</div >
+<div class="buttonAccount">
+<a href="/playground"><button id="back" class="playground">Back</button></a>
 
-</body>
+<%if(user){%>  
+    
+    <a  href="/playground/<%=users._id%>/update"><button class= "accountPage" id="updateButton" type="submit" >Update Account</button></a> 
+
+    <%} else{%> 
+
+    <%}%>
+ 
+</div>
+
+
  
 
     
