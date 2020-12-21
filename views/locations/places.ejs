@@ -33,6 +33,11 @@
                       
                       <p class="lead"><% locations.forEach(function(location){ %> 
                         <a href="/explorations/<%=location._id%>" ><h2><%=location.placename%></h2></a>
+                        <%=location.placeurl%>
+                        <%=location.placeaddress  %>
+                        <%=location.placelocality %>
+                        <%=location.placecity  %>   
+                        <%=location.placezipcode%>
                         <% location.reviews.forEach(function(location){ %>
                         <h5><%=location.review.content%></h5>
                           <%})%> 

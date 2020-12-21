@@ -368,6 +368,7 @@ body.locationsPage {
   color: white;
   background-color:  #38b6ff;
   font-variant-caps: small-caps ;
+  background-image: url(https://i.imgur.com/EZaHF5V.png);
 }
 /* Message Board */
 body.messagePage {

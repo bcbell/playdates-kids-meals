@@ -25,14 +25,12 @@ __Views__
    - [x ] Able to view individual recipes and restaurants
    - [x ] Able to add recipes and restaurants (users)
    - [x ] Reviews
-   - [ ] Search capabilities
 6. Kid-Friendly Explorations & Experiences
    - [ ] Google Maps (N/A)
    - [ x] List of attractions
    - [x ] Able to view individual attractions
    - [ x] Able to add attractions
    - [ ] Reviews
-   - [ ] Search capabilities
 7.  Family Q & A Board
    - [x ] Message Board Completed
    - [x ] Users are able to send and reply to messages
@@ -90,8 +88,8 @@ __Premlinary Planning__
  2. Nav Bar 
    - [x ] Logo (Left)
    - [x ] Links- Home, Play & Explore (Attractions), Eat (Food/Restaurants), Experience (Events- goal), Playroom (Board) (Left)
-   - [ ] User Photo, User Name, Message Bubble (chat icon), Notifications Bubble (notifications icon) Recommendations(reviews) (Right)
-   - [x ] Search bar (Right) 
+   - [x ]  User Name, Message Bubble (chat icon), Notifications Bubble (notifications icon) Recommendations(reviews) (Right)
+   
 
 __Wireframe__
 
@@ -116,6 +114,7 @@ __Future Enhancements__
 2. Include Google Maps & YouTube 
 3. Contact Us Form
 4. Search functionality
+5. Include image upload in forms
 
    
 

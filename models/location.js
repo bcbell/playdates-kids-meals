@@ -17,12 +17,27 @@ const locationSchema = new Schema(
         placeaddress: String,
         placelocality: String,
         placecity: String,
+        state: {type: String, enum:['al','ak','az','ar','ca','co','ct','de','dc','fl','ga', 'hi','id','il','in','ia','ks','ky','la','me', 'md','ma','mi','mn','ms','mo','mt','ne', 'nv','nh','nj','nm','ny','nc','oh','ok','or','pa','ri','sc','sd','tn','tx','ut','vt','va','wa', 'wi','wy','as','gu','pr','vi']},
         placezipcode: Number,
-        timings: String,
         locationType: String,
-        age : Number,
+        age : {
+          type: 'object',
+          properties: {
+            param: {
+              oneOf:[
+                {
+                enum:['expecting parents','newborns', 'infant','toddlers', 'preschoolers', 'schoolage', 'preteen', 'teenagers', 'college']
+              },{
+                type:'array',
+                items: {type : 'integer'}
+              }              
+            ]
+            }
+          },
+          additionalProperties : false,
+          required: ['param'],
+        },
         highlights: String,
-        aggregate_rating: Number,
         reviews: [reviewSchema],
         user: [{type: Schema.Types.ObjectId, ref:'User'}],
         restaurants:  [{type: Schema.Types.ObjectId, ref: 'Rest'}],
