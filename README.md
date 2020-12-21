@@ -76,13 +76,13 @@ Objective- Design a app that is clean yet functional.
 5. Bootstrap
    - [ x] Search bar and dropdown menu
    -  [ x] Bootstrap SVG icons 
-   -  [ ] Cards
+   -  [x ] Cards
 
 
 __Premlinary Planning__
  1. CSS and HTML
    - [ x ] Fonts- Poppins Light & Architects Daughter
-   - [ ]  Colors- Light blue (#38b6ff), Bright red (#ff1616), green(#578e44), grey (#607d8b), turquoise blue (#5ce1e6), black( #000000)
+   - [ x]  Colors Incorpoated- Light blue (#38b6ff), Bright red (#ff1616), green(#578e44), grey (#607d8b), turquoise blue (#5ce1e6), black( #000000)
    - [ x ]  Background Image ![Image](https://i.imgur.com/ctuJbvw.png)
     
  2. Nav Bar 
