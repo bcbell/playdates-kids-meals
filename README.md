@@ -1,5 +1,8 @@
 # playdates-kids-meals
 
+
+__Playdates & Kids Meals__
+
 This project is designed for families with kids. As a mother of 2 toddlers, I wanted to create an application that would be beneficial to parents and caregivers looking to kid-friendly meals, attractions, and restaurants. Offering families a unique varity of resources from entertainment and meal time.  
 
 __App Overview__
@@ -118,6 +121,7 @@ __Future Enhancements__
 3. Contact Us Form
 4. Search functionality
 5. Include image upload in forms
+6. Images
 
    
 
@@ -134,3 +138,4 @@ __List of Technologies Used:__
 - Favicon
 - Heroku
 - W3School
+- Trello
