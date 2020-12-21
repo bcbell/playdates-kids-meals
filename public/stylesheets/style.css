@@ -376,6 +376,25 @@ body.locationsPage {
 .locationsPage h1{
   margin-top: 20px;
 }
+.tabsLocation{
+  margin-top: 50px;
+  font-family: 'Architects Daughter', cursive;
+  font-variant-caps: small-caps ;
+  cursor: pointer;
+  font-size: 20px;
+ 
+}
+#locationDisplay, #messages-tab{
+  background-color: rgba(0, 0, 0, 0.668);
+}
+h3.locationsDisplay{
+  margin-top: 10px;
+  color: #38b6ff ;
+}
+#messages-tab{
+  color: white;
+}
+
 /* Message Board */
 body.messagePage {
   font-family: 'Poppins', sans-serif;

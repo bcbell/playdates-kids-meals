@@ -1,20 +1,16 @@
 
 <%-include('../partials/header')%>
-<body class="eatsPage">
+<body class="locationsPage">
  <h1>Hey, <%= user ? user.name : "friend" %> let's try this <%= title %> !</h1>
 
 
 
-<div class= "tabsEats">
+<div class= "tabsLocation">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
    
-      <li class="nav-item" role="presentation">
+      <!-- <li class="nav-item" role="presentation">
         <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Reviews for <%=location.placename%> </a>
-      </li>  
-  
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%=location.placename%> Website</a>
-      </li> 
+      </li>   -->
           <li class="nav-item" role="presentation">
         <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false"><%=location.placename%> </a>
       </li> 
@@ -24,7 +20,7 @@
       <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
 
           <!-- Location details -->
-          <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+          <!-- <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
             <div id="recipeDisplay">
             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="container"></div>
@@ -69,35 +65,25 @@
         
         </div>
             </div>
-        </div>
+        </div> -->
 
 
-      <!-- Attraction Website Display  -->
-      <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <div class="list-group">
-              <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
-                  <div class="container">
-                    <h1 id="headerRecipes" class="display-4">Research Assignment: <%=location.placename%> </h1>
-                    <h4 class="recipeDisplay">Check out their website before dining </h4>
-                    <p class="lead">
-                     
-                     <a href="<%=location.placeurl%>"><h1><%=location.placeurl%></h1></a>
-                    
-                    </p>
-                  </div>
-                </div>
-        </div>
-    </div>
-
+     
              
- <!-- Review for location -->
+ <!-- Location Details -->
  <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
   <div class="list-group">
-      <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
+      <div id="locationDisplay" class="jumbotron jumbotron-fluid">
           <div class="container">
             <h1 id="headerRecipes" class="display-4"> <%=location.placename%> </h1>
 
             <h4 class="recipeDisplay"> <%=location.placename%></h4>
+            <h4 class="recipeDisplay"><%=location.placeaddress%></h4>
+            <h4 class="recipeDisplay"><%=location.placecity%> , <%=location.state%> <%=location.placezipcode%></h4>
+
+            <h4 class="recipeDisplay">Attraction Type: <%=location.locationType%></h4>
+
+            <div><h3 class="locationsDisplay">This location is appropriate for the following age groups:</h3><h4 class="recipeDisplay"> <%=location.age%></h4></div>
             <br>
                     
 
