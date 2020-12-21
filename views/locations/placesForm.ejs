@@ -92,7 +92,6 @@
             <div id="state" class=" md-3">
                 <label for="inputState" class="form-label">Appropriate for Ages</label>
                 <select name="age" id="inputState" class="form-select" multiple onchange="showSelectedOptions(this.options)">
-                  <option selected>Choose...</option>
                   <option value="expecting parents">Expecting Parents</option>
                   <option value="newborns">Newborns</option>
                   <option value="infant">Infants</option>
@@ -103,6 +102,42 @@
                   <option value="teenagers">Teenagers</option>
                   <option value="college">College-Age/Adult</option>
                  </select>
+            </div>
+            <div>
+                <label>Attraction Type</label>
+                <select name="locationType" id="inputState" class="form-select" multiple onchange="showSelectedOptions(this.options)">
+                    <optgroup label="Natural Attractions">
+                        <option value="National Park">National Park</option>
+                        <option value="Beaches">Beach</option>
+                        <option value="Caves">Cave</option>
+                        <option value="Mountains">Mountains</option>
+                        <option value="Hills">Hills</option>
+                        <option value="Waterfalls">Waterfalls</option>
+                        <option value="Islands">Island</option>
+                        <option value="Forests">Forest</option>
+                    </optgroup>
+                    <optgroup label="Tourist Attractions">
+                        <option value="Entertainment Park">Entertainment Park</option>
+                        <option value="Wildlife ">Wildlife</option>
+                        <option value="Aquarium">Aquarium</option>
+                        <option value="Botantical Garden">Botanical Garden</option>
+                        <option value="Museum">Museum</option>
+                        <option value="Art Gallery">Art Gallery</option>
+                        <option value="Historical or Heritage">Historical or Hertiage</option>
+                    </optgroup>
+                    <optgroup label="Sports Attractions">
+                        <option value="Spectating Sports Atrraction">Spectating Sports Atrraction</option>
+                        <option value="Participating Sports Attraction">Participating Sports Attraction</option>
+                        <option value="Stadium Tour">Stadium Tour</option>
+                    </optgroup>
+                    <optgroup label="Special Events">
+                        <option value="Market">Market</option>
+                        <option value="Festivals">Festival</option>
+                        <option value="Parade">Parade</option>
+                        <option value="Exhibitions">Exhibitions</option>
+                        <option value="Entertainment Venue">Entertainment Venue</option>
+                    </optgroup>
+
             </div>
             <div class="mb-5">
               <div id= "contactMessage" class="form-check">

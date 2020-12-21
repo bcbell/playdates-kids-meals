@@ -4,8 +4,168 @@
  <h1>Ready for some <%= title %>, <%= user ? user.name : "friend" %>?</h1>
 
 
+ <style>
+  table {
+    border-spacing: 0;
+    width: 100%;
+    border: 10px solid green;
+  }
+  
+  th {
+    cursor: pointer;
+    border-bottom: ivory 10px solid;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: orange
+  }
+  </style>
+  </head>
+  <body>
+  
+  <p><strong>Click the headers to sort the table.</strong></p>
+  <p>The first time you click, the sorting direction is ascending (A to Z).</p>
+  <p>Click again, and the sorting direction will be descending (Z to A):</p>
+  
+  <table id="myTable">
+    <tr>
+     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+      <th onclick="sortTable(0)">Attraction Name</th>
+      <th onclick="sortTable(1)">Closest City</th> 
+      <th onclick="sortTable(2)">State</th>
+      <th onclick="sortTable(3)">Appropriate for Ages</th>
+      <th onclick="sortTable(4)">Attraction Type</th>
+    </tr>
+   <%= locations.forEach(function(location){ %> 
+      <td><a href="/explorations/<%=location._id%>" ><%=location.placename%></a></td>
+      <td><%=location.placelocality %></td>
+      <td><%=location.state%></td>
+      <td><%=location.age  %></td>
+      <td><%=location.locationTypes%></td>
+      
+   
+         <%})%>   
+      
+    </tr>
+  
+  </table>
+ 
+  <br><br>
+ 
+  <span ><h4 class="addRecommendation">Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</span>
+   <% if (user) {%>
+ </h4><h3><p> Add a recommendation </p></h3><br>
+    <a href="/eats/recipes"><button class="add">Add Restaurant</button></a>
+ 
+    <%} else{%>
+    
+ 
+    <p class="mealsLogin"></p><%= user ? user.name : "friend" %>, login in below to a add your recommendation to the list!</p>
+ 
+    <div class="loginAccount">
+        <a id="google" class="googleAccount" href="/auth/google">
+           <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
+ <%}%>
+ </div>
+ 
+ 
+ <%-include('../partials/footer')%> 
+ 
+  <script>
+  function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("myTable");
+    switching = true;
+    //Set the sorting direction to ascending:
+    dir = "asc"; 
+    /*Make a loop that will continue until
+    no switching has been done:*/
+    while (switching) {
+      //start by saying: no switching is done:
+      switching = false;
+      rows = table.rows;
+      /*Loop through all table rows (except the
+      first, which contains table headers):*/
+      for (i = 1; i < (rows.length - 1); i++) {
+        //start by saying there should be no switching:
+        shouldSwitch = false;
+        /*Get the two elements you want to compare,
+        one from current row and one from the next:*/
+        x = rows[i].getElementsByTagName("TD")[n];
+        y = rows[i + 1].getElementsByTagName("TD")[n];
+        /*check if the two rows should switch place,
+        based on the direction, asc or desc:*/
+        if (dir == "asc") {
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch= true;
+            break;
+          }
+        } else if (dir == "desc") {
+          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+      if (shouldSwitch) {
+        /*If a switch has been marked, make the switch
+        and mark that a switch has been done:*/
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+        //Each time a switch is done, increase this count by 1:
+        switchcount ++;      
+      } else {
+        /*If no switching has been done AND the direction is "asc",
+        set the direction to "desc" and run the while loop again.*/
+        if (switchcount == 0 && dir == "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
+    }
+  }
+  </script>
 
-<div class= "tabsEats">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class= "tabsEats">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
   
 
@@ -18,37 +178,37 @@
      <li class="nav-item" role="presentation">
       <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="true">Kid-Friendly & Family-Friendly Attactions</a>
     </li>
-  </ul>
+  </ul> -->
   
-  <div class="tab-content">
+  <!-- <div class="tab-content">
     <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
     <!-- Kid  Meals Recipe Display -->
-    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+    <!-- <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
         <div class="list-group">
             <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
                 <div class="container">
                   <h1 id="headerRecipes" class="display-4">The Attraction Blackboard</h1>
-                      <h4 class="recipeDisplay">Where will your family create memories?</h4>
+                      <h4 class="recipeDisplay">Where will your family create memories?</h4> -->
 
-                      
-                      <p class="lead"><% locations.forEach(function(location){ %> 
+                       <!-- -->
+                      <!-- <p class="lead"><% locations.forEach(function(location){ %> 
                         <a href="/explorations/<%=location._id%>" ><h2><%=location.placename%></h2></a>
                         <%=location.placeurl%>
                         <%=location.placeaddress  %>
                         <%=location.placelocality %>
                         <%=location.placecity  %>   
-                        <%=location.placezipcode%>
+                        <%=location.placezipcode%> <%})%> 
                         <% location.reviews.forEach(function(location){ %>
                         <h5><%=location.review.content%></h5>
                           <%})%> 
-                          <%})%>   </p>  </p>
-                </div>
+                           </p>  </p> -->
+                <!-- </div>
               </div>
     </div>
-</div>
+</div> --> -->
 
     <!-- Kid-Friendly Attractions Display  -->
-    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <!-- <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <div class="list-group">
             <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
                 <div class="container">
@@ -62,10 +222,10 @@
                 </div>
               </div>
     </div>
-</div>
+</div> -->
   
 <!-- Family friendly location -->
-    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+    <!-- <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
         <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
            <% if (user) {%>
          </h4><h3><p> Will you be adding a kid and family-friendly site? </p></h3><br>
@@ -80,7 +240,7 @@
                 <a id="google" class="googleAccount" href="/auth/google">
                    <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
          <%}%>
-        </div>
+        </div> -->
     </div>
   </div>
 </div>
