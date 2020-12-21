@@ -45,6 +45,7 @@
      <th onclick="sortTable(4)">Features
     </th>
      <th onclick="sortTable(5)">Service</th>
+     <th onclick="sortTable(6)">Reviews</th>
    </tr>
  
    <% rest.forEach(function(rest){ %> 
@@ -52,14 +53,14 @@
       <td><a href="restaurants/<%=rest._id%>"><%=rest.name%></a></td>
       <td><%=rest.locality%></td>
       <td><%=rest.state%></td> 
-      <td><%=rest.cuisines%></td>
       <td><%=rest.speciality%></td>
       <td><%=rest.features%></td>
-      <td><%=rest.service%></td>
+      <td><%=rest.service%></td>  
+      <td><%=rest.reviews.content%></td>
    
     </tr>
       
-      <%})%>     
+    <%})%>     
      
  </table>
  <br><br>

@@ -218,7 +218,7 @@ button.deletePage{
 .account{
   margin-left: 50px;
 }
-#updateButton, #updateReturn, button.deletePage:hover {
+#updateButton, #restBtn, #updateReturn, button.deletePage:hover {
   padding: 15px 25px;
   font-size: 20px;
   color: yellow;
@@ -230,7 +230,7 @@ button.deletePage{
   font-family: 'Architects Daughter', cursive;
   font-variant-caps: small-caps ;
 }
-#updateButton, #updateReturn:active {
+#updateButton, #restBtn #updateReturn:active {
 background-color: green;
 box-shadow: 0 10px #666666;
 transform: translateY(5px);
@@ -313,16 +313,43 @@ h4.recipeDisplay{
 #textRecipes{
   color:black
 }
-#restaurantCard{
+/* Restaurant Form */
+body.restaurantPage{
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  /* display: flex; */
+  /* align-items: center; */
+  text-align: center;
+  color: white;
+  background-color:  #38b6ff;
+  font-variant-caps: small-caps ;
+  background-image: url(https://i.imgur.com/LMP7AO8.png);
+}
+div.restaurantForm{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+ 
+}
+#restBtn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+div.restFormTop{
+  display:block;
+ 
+}
+/* #restaurantCard{
   color: black;
 }
 #restaurants{
   margin-top: 10px;
-}
-div.restaurantsCards{
+} */
+
+/* div.restaurantsCards{
   display: flex;
   justify-content: space-evenly;
-}
+} */
 button.add{
   background-color: green;
   color: yellow;

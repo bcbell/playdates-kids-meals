@@ -1,8 +1,118 @@
 <%-include('../partials/header')%>
-<body class="eatsPage">
+<body class="restaurantPage">
     <h1>Ready to add a great <%= title %>, <%= user ? user.name : "friend" %>?</h1>
-        
-        <form class="recipeForm" action="/restaurants" method="POST">
+    
+    <div class="restaurantForm">
+    <form class= "restaurantForm" action="/restaurants" method="POST">
+    <div class="restFormTop">
+        <div class="col-md-50">
+            <label for="inputEmail4" class="form-label">Restaurant</label>
+            <input name="name" type="text" class="form-control" id="inputEmail4" placeholder="Name of restaurant">
+          </div>
+          <div class="mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Restaurant Website</label>
+            <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="http://websitehere.com">
+          </div>
+        <div class="col-50">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" name="address" placeholder="1234 Main St">
+        </div>
+        <div class="col-50">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" name="addressTwo" placeholder="Apartment, studio, or floor">
+        </div>
+    </div>
+        <div class="col-md-20">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" name="city" id="inputCity" placeholder="City">
+        </div>
+        <div id="state" class=" md-5">
+          <label for="inputState" class="form-label">State</label>
+          <select  id="inputState" class="form-select" name="state">
+            <option selected>Choose...</option>
+            <option value="al">Alabama</option>
+            <option value="ak">Alaska</option>
+            <option value="az">Arizona</option>
+            <option value="ar">Arkansas</option>
+            <option value="ca">California</option>
+          </select>
+        </div>
+        <div class="col-md-35">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" name="zipcode" id="inputZip" placeholder="ZIP Code">
+        </div>
+           <div class="col-md-35">
+          <label for="inputZip" class="form-label">Cuisine Speciality</label>
+          <input type="text" class="form-control" name="speciality" id="inputZip" placeholder=" Taco restaurant">
+        </div>
+          <div class="col-md-3">
+            <label for="inputZip" class="form-label">Features</label>
+            <select name="features" multiple onchange="showSelectedOptions(this.options)">
+                <option value="Accepts Credit Cards" >Accepts Credit Cards</option>
+                <option value="Changing Tables" >Changing Tables</option>
+                <option value="Delivery" >Delivery</option>
+                <option value="Dogs Allowed" >Dogs Allowed</option>
+                <option value="Family Restrooms" >Family Restrooms</option>
+                <option value="Free Parking" >Free Parking</option>
+                <option value="Free Wifi" >Free Wifi</option>
+                <option value="Gender Neutral Restrooms" >Gender Neutral Restrooms</option>
+                <option value="Good for Families" >Good for Families</option>
+                <option value="Good for Large Groups" >Good for Groups</option>
+                <option value="Kids Menu" >Kids Menu</option>
+                <option value="Offers Alcohol" >Offers Alcohol</option>
+                <option value="Outdoor Seating" >Outdoor Seating</option>
+                <option value="No Smoking" >No Smoking</option>
+                <option value="Reservations" >Reservations</option>
+                <option value="Waitlist">Waitlist</option>
+                <option value="Wheelchair Accessible" >Wheel Chair Accessible</option>
+            </select>
+            <div class="col-md-100">
+                <label>Meals </label>
+                <select name="service" multiple onchange="showSelectedOptions(this.options)">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="brunch">Brunch</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="late night">Late Night</option>
+
+                </select>
+            </div>
+          </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" id="restBtn">Submit</button>
+        </div>
+      </form>
+     
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <form class="recipeForm" action="/restaurants" method="POST">
         <label>Name: </label><input type="text" name="name">
         <label>Website: </label><input type="url" name="url" placeholder="restaurant.com">
         <label>Address: </label><input type="text" name="address">
@@ -10,7 +120,7 @@
         <button type="submit">Submit</button>
         </form>
     
-    
+     -->
     
   
 
@@ -23,6 +133,11 @@
 
 
 <%-include('../partials/footer')%>
+<script>
+    const showSelectedOptions = options => alert(
+      [...options].filter(o => o.selected).map(o => o.value)
+    )
+   </script>
 
 <script>
     $('.dropdown-toggle').dropdown()

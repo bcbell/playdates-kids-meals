@@ -16,7 +16,7 @@ function index(req, res) {
 }
 
 function newRestaurant(req, res){
-    res.render('eats/restaurantForm', {title: "Kid-Friendly Recipe", user: req.user
+    res.render('eats/restaurantForm', {title: "Kid-Friendly & Family Friendly Restaurant", user: req.user
 })
 }
 
