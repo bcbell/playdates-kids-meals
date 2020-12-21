@@ -370,6 +370,9 @@ body.locationsPage {
   font-variant-caps: small-caps ;
   background-image: url(https://i.imgur.com/EZaHF5V.png);
 }
+#placesBtn{
+  margin-top: 20px;
+}
 /* Message Board */
 body.messagePage {
   font-family: 'Poppins', sans-serif;
