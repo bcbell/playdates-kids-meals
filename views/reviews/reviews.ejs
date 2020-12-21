@@ -1,7 +1,7 @@
 <%-include('../partials/header')%>
 <body class="locationsPage">
 
-
+<% if (user) {%>
 
                     <h1 id="headerRecipes" class="display-4">Reviews </h1>
                     <h4 class="locationsDisplay">Read about the experiences of other families at , wanna share your experience? Leave a review below: </h4>
@@ -48,7 +48,16 @@
            <%}%>
          </div>
 
+   <%} else{%>
+   
 
+   <p class="mealsLogin"></p><%= user ? user.name : "friend" %>, login in below to review!</p>
+
+   <div class="loginAccount">
+       <a id="google" class="googleAccount" href="/auth/google">
+          <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
+<%}%>
+</div>
 <%-include('../partials/footer')%>
 
 <script>
@@ -61,3 +70,8 @@
   </script>
 
 </body>
+
+  
+
+
+

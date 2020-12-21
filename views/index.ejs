@@ -1,8 +1,8 @@
 <%- include('partials/header') %>
-
+<% if (user) { %> <!---Logged In-->
 <body class="homePage">
  <div class="homePage">
-<% if (user) { %> <!---Logged In-->
+
     <h1 class="homePage">hello, <%= user ? user.name : "friend" %>!</h1>
     
       <div class="card-deck ">
@@ -40,6 +40,7 @@
  
 
 <% } else { %> <!---Logged Out-->
+  <body class="nonsignIn">
     <video id="videoHP" src="https://i.imgur.com/6wv9lnK.mp4" loop=true autoplay muted cover></video>    
 </div>
  <% } %> 

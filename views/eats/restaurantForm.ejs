@@ -1,7 +1,7 @@
 <%-include('../partials/header')%>
 <body class="restaurantPage">
     <h1>Ready to add a great <%= title %>, <%= user ? user.name : "friend" %>?</h1>
-    
+ <% if (user) {%>    
     <div class="restaurantForm">
     <form class= "restaurantForm" action="/restaurants" method="POST">
     <div class="restFormTop">
@@ -130,7 +130,20 @@
           <button type="submit" class="btn btn-primary" id="restBtn">Submit</button>
         </div>
       </form>
-     
+      <span ><h4 class="addRecommendation">Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</span>
+       
+      
+         <%} else{%>
+         
+      
+         <p class="mealsLogin"></p><%= user ? user.name : "friend" %>, login in below to a add your recommendation to the list!</p>
+      
+         <div class="loginAccount">
+             <a id="google" class="googleAccount" href="/auth/google">
+                <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
+      <%}%>
+      </div>
+      
     </div>
 
 

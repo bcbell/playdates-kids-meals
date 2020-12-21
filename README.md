@@ -19,7 +19,7 @@ __Views__
 3. Add Bootstrap 
 4. Home 
    - [x ] Video (non-user)
-   - [ ] Cards (users)
+   - [x ] Cards (users)
 5. Kid-Friendly Dining & Meals
    - [ x] List of recipes and restaurants
    - [x ] Able to view individual recipes and restaurants
@@ -30,7 +30,7 @@ __Views__
    - [ x] List of attractions
    - [x ] Able to view individual attractions
    - [ x] Able to add attractions
-   - [ ] Reviews
+   - [ x] Reviews
 7.  Family Q & A Board
    - [x ] Message Board Completed
    - [x ] Users are able to send and reply to messages
@@ -103,9 +103,9 @@ __Final__
 
 ![Logo](https://i.imgur.com/OWSASHX.png)
 
-![DemoImage](url)
+![DemoImage](https://i.imgur.com/nIGZbLv.png)
 
-![DemoImage](url)
+![DemoImage](https://i.imgur.com/0La7ubj.png)
 
 
 __Future Enhancements__
