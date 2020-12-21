@@ -4,8 +4,8 @@ const locationsCtrl =require('../controllers/locations');
 
 router.get('/', locationsCtrl.index)
 router.get('/attractions', locationsCtrl.new)
-router.post('/', locationsCtrl.create)
-router.get('/:id', locationsCtrl.show)
+router.post('/', isLoggedIn, locationsCtrl.create)
+router.get('/:id', isLoggedIn, locationsCtrl.show)
 
 
 

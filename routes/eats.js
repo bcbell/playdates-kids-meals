@@ -4,8 +4,8 @@ const eatsCtrl =require('../controllers/eats');
 
 router.get('/', eatsCtrl.index)
 router.get('/recipes', eatsCtrl.new)
-router.post('/', eatsCtrl.create)
-router.get('/:id', eatsCtrl.show)
+router.post('/', isLoggedIn, eatsCtrl.create)
+router.get('/:id', isLoggedIn, eatsCtrl.show)
 
 
 function isLoggedIn(req, res, next){

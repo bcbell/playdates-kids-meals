@@ -1,4 +1,3 @@
-const axios  = require('axios');
 const Eat =require('../models/eat')
 
 
@@ -14,7 +13,7 @@ function index(req, res) {
     Eat.find({})
     .then ((eats, users)=>{
     res.render("eats/meals", {
-     title: "Kid-Friendly Dining & Meals", user: req.user,  users, eats})
+     title: "Kid-Friendly Meals", user: req.user,  users, eats})
     })
 }
 

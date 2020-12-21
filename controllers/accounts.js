@@ -24,7 +24,6 @@ function show (req, res){
     })
 }
 function update(req, res, next){
-    // req.body.bio = !!req.body.bio
     User.findByIdAndUpdate(req.params.id, req.body, {new:true})
     .then(()=>{
             res.redirect(`/playground/${req.params.id}`)

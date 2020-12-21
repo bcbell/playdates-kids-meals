@@ -1,11 +1,11 @@
 const router =require('express').Router();
 const usersCtrl =require('../controllers/accounts');
 
-router.get('/', usersCtrl.index)
-router.get('/:id', usersCtrl.show)
-router.put('/:id/', usersCtrl.update)
-router.get('/:id/update', usersCtrl.edit)
-router.delete('/:id', usersCtrl.delete)
+router.get('/', isLoggedIn, usersCtrl.index)
+router.get('/:id', isLoggedIn, usersCtrl.show)
+router.put('/:id/', isLoggedIn, usersCtrl.update)
+router.get('/:id/update', isLoggedIn, usersCtrl.edit)
+router.delete('/:id', isLoggedIn, usersCtrl.delete)
 
 
 
