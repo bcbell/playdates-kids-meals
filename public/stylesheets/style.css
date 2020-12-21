@@ -419,6 +419,16 @@ h3.locationsDisplay{
     margin-left: 200px;
     margin-right: 200px;
   }
+  #reviewForm{
+    padding: 10px;
+  }
+  #reviewForm input, textarea{
+    margin-top: 10px;
+  } 
+  .locationsDisplay{
+    color: orange;
+    background-color: rgba(0, 0, 0, 0.34);
+  }
 
 /* Message Board */
 body.messagePage {
