@@ -231,9 +231,9 @@ button.deletePage{
   font-family: 'Architects Daughter', cursive;
   font-variant-caps: small-caps ;
 }
-#updateButton, #restBtn #updateReturn:active {
+#updateButton, #message, #restBtn #updateReturn:active {
 background-color: green;
-box-shadow: 0 10px #666666;
+box-shadow: 0 5px #666666;
 transform: translateY(5px);
 outline: none;
 }
@@ -345,8 +345,6 @@ h4.recipeDisplay{
 body.restaurantPage{
   font-family: 'Poppins', sans-serif;
   background-size: cover;
-  /* display: flex; */
-  /* align-items: center; */
   text-align: center;
   color: white;
   background-color:  #38b6ff;
@@ -430,6 +428,16 @@ body.messagePage {
   color: white;
   background-color:  #38b6ff;
   font-variant-caps: small-caps ;
+  background-image: url(https://i.imgur.com/vFggTE0.png);
+}
+div.messageboard{
+  background-color: rgba(0, 0, 0, 0.634);
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 /* About Us Page */
 body.aboutPage {

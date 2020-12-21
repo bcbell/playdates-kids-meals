@@ -5,18 +5,32 @@
  
  <h1 class="homePage">hello, <%= user ? user.name : "friend" %>!</h1>
 
+ <style>
+   .messagePage h1{
+     color: yellow;
+   }
+   #avatarPhoto{
+     border-radius: 100%;
+   }
+   h3.reply{
+     color: white;
+   }
+
+ </style>
+
  <form id='replyboard' action="/messageboard/<%= message._id %>" method="POST">
    <div class="form-group">
      <input type="text" class="form-control" aria-describedby="message" name="message" placeholder="Enter reply...">
    </div>
    <button type="submit" class="btn btn-primary">Reply</button>
  </form>
-
- <h3 class="reply"><%= message.postedBy %>'s Post</h3>
+<div>
+ 
  
 
 <div id=send class='messageboard'>
-    <div class="messager"><a href="/playground/<%=user._id%>"><img id="avatarPhoto" width="40" src="<%= message.avatar %>" alt=""></a><%= message.postedBy %></div>
+    <div class="messager">
+      <h3 class="reply"><%= message.postedBy %>'s Post</h3><a href="/playground/<%=user._id%>"><img id="avatarPhoto" width="40" src="<%= message.avatar %>" alt=""></a><%= message.postedBy %></div>
     <div class='message'>
 <%= message.title %>-<%= message.createdAt.toLocaleString()%>
     </div><br>
@@ -27,7 +41,7 @@
     <%= reply.postedBy %> <img id="avatarPhoto" width="25" src="<%= reply.avatar %>" alt=""> <h6><%= reply.message %> - <%= message.createdAt.toLocaleString()%></div><br>
  <% }) %>
 
-
+</div>
 
 
 
