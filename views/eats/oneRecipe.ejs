@@ -6,13 +6,13 @@
  
 <div class= "tabsEats">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-    
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%=eats.title%> Grocery Guide</a>
-      </li> 
        <li class="nav-item" role="presentation">
-        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="true">Recipe: <%=eats.title%> </a>
+        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Recipe: <%=eats.title%> </a>
       </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true"><%=eats.title%> Grocery Guide</a>
+      </li> 
+    
     </ul>
     
     <div class="tab-content">
@@ -22,9 +22,41 @@
           <div class="list-group">
               <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
                   <div class="container">
-                    <h1 id="headerRecipes" class="display-4">Recipe: <%=eats.title%> </h1>
-                        <h4 class="recipeDisplay">Let's get started</h4>
-                         <p class="lead"><%=eats.title%> </p>
+                    <h1 id="headerRecipes" class="display-4">Recipe: <%=eats.title%> (<%=eats.meal%>)</h1>
+                        <h4 class="recipeDisplay"><%=eats.descripton%></h4>
+                        <table id="recipeDish">
+                          <thead>
+                            <tr>
+                              <th>Dish Category: <%=eats.dish%></th>
+                              <th>Meal Type: <%=eats.meal%></th>
+                              <th >Cuisine Type: <%=eats.cuisineType%></th>
+                              </tr>
+                              <!-- <tr>
+                                <th>Cuisine Type: <%=eats.cuisineType%></th>
+                              </tr> -->
+                              <tr>
+                                <th>Food Allergies: <%=eats.health%></th>
+                                <th>Dietary Plan: <%=eats.diet%></th>
+                              </tr>
+                              <tr>
+                                <th>Prep: <%=eats.prep%></th>
+                                <th>Cook Time: <%=eats.cookTime%></th>
+                                <th> Serves : <%=eats.serves%></th>
+                              </tr>
+                              <tr>
+                                <th></th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Directions: <%=eats.recipe%> </td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                         
+                        
+                        <p class="lead">Reference Website: <%=eats.url%><th></th>  </p>
                   </div>
                 </div>
         </div>
@@ -39,8 +71,9 @@
                     <h4 class="recipeDisplay">Did you get everything? </h4>
                     <p class="lead">
                      
-                     <input type="checkbox" value="<%=eats.ingredients%>">
-                     <label>Ingredient</label>
+                      
+                     <input type="checkbox" value="<%=eats.ingredients%>"><%=eats.ingredients%>
+                    
                     
                     </p>
                   </div>
