@@ -10,7 +10,21 @@ const eatSchema =new Schema({
     dish: {type: String, enum:['soup', 'salad',  'side', 'main', 'appetizer','dessert' ]} ,
     recipe: String, 
     url: String,
-    ingredients: String,
+    ingredients: {
+        type: 'object',
+        properties: {
+          param: {
+            oneOf:[
+              {
+              type:'array',
+              items: {type : 'integer'}
+            }              
+          ]
+          }
+        },
+        additionalProperties : false,
+        required: ['param'],
+      },
     prep: String,
     cookTime: String,
     serves: Number,
