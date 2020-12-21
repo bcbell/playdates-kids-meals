@@ -3,19 +3,10 @@
 <body class="restaurantPage">
  <h1>Hey, <%= user ? user.name : "friend" %> let's try this <%= title %> !</h1>
 
- <h1><%=rest.name%></h1>
-
-
  <div class= "tabsEats">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
    
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Reviews for <%=rest.name%> </a>
-      </li>  
-  
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%=rest.name%> Website</a>
-      </li> 
+   
           <li class="nav-item" role="presentation">
         <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Experience <%=rest.name%> </a>
       </li> 
@@ -23,53 +14,6 @@
     
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
- <!-- Reviews for restaurant Display -->
- <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="messages-tab">
-    <div class="list-group">
-        <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 id="headerRecipes" class="display-4">Reviews for<%=rest.name%> </h1>
-                  <h4 class="recipeDisplay">Here's what other families had to say about the <%=rest.name%></h4>
-                   <p class="lead">
-
-                    <p class="lead">
-
-                      <%if (rest.reviews.length){%> 
-                   
-                        <% rest.reviews.forEach(function(rev){%>
-                         
-                                  <h1><%rev.rating%></h1>
-                                                       <%})%>  
-                    
-                    
-                                     <%} else {%>
-                             <br><h5 class="reviews"> Be the first to review  </h5> 
-                             <%}%>
-                          </p>
-
-
-            </div>
-          </div>
-  </div>
-</div>
-
-      <!-- Restaurant Website Display  -->
-      <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <div class="list-group">
-              <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
-                  <div class="container">
-                    <h1 id="headerRecipes" class="display-4">Research Assignment: <%=rest.name%> </h1>
-                    <h4 class="recipeDisplay">Check out their website before dining </h4>
-                    <p class="lead">
-                     
-                     <a href="<%=rest.url%>"><h1><%=rest.url%></h1></a>
-                    
-                    </p>
-               
-                  </div>
-                </div>
-        </div>
-    </div>
 
 
         <!-- Restaurant details -->
@@ -79,17 +23,21 @@
                 <div class="container">
                    
                   <h1 id="headerRecipes" class="display-4"> <%=rest.name%> </h1>
-                    <h4 class="recipeDisplay">Interested in trying out the <%=rest.name%>? Details below: </h4>
+                    <h4 class="recipeDisplay">Interested in trying out the <%=rest.name%>? Details below: </h4><br>
 
-                    <h5>Address: <%=rest.address%></h5>
+                    <h4>Service: <%=rest.service%></h4><br>
+
+                    <h4><%=rest.address%></h4>
+                    <h4><%=rest.addressTow%></h4>
+                    <h4><%=rest.city%>, <%=rest.state%> <%=rest.zipcode%></h4>
+                    <h4><%=rest.name%> Website: <%=rest.url%></h4>
                     <br>
-                    
-                  
+                    <p>This restaurant offers the follow : <%=rest.features%></p>
                    
                 
         
                     <h4 class="recipeDisplay">Wanna review <%=rest.name%>?  </h4>
-                    <a href=/reviews><button>Review Here</button></a> 
+                    <a href=/reviews><button class="toReviews">Review Here</button></a> 
                      
                     <br>
         

@@ -96,6 +96,7 @@ body.homePage {
   color: white;
   background-color:  #38b6ff;
   font-variant-caps: small-caps ;
+  background-image: url(https://i.imgur.com/cSFiXST.png);
 }
 #videoHP{
   bottom: 0;
@@ -301,12 +302,26 @@ p.lead, #recipeDish td{
   padding: 20px;
   margin-top:30px ;
 }
+input[id=cb] {
+  display: none;
+}
 
-/* 
-button.recipeBtn{
-  padding: 10px;
-  margin-top: 15px;
-} */
+input[id=cb]:checked~p.strikethrough {
+  text-decoration: line-through;
+  color: red;
+}
+.recipeBtns, .toReviews, #reviews:active{
+  background-color:#38b6ff ;
+  box-shadow: 0 5px #666666;
+transform: translateY(5px);
+outline: none;
+}
+.recipeBtns, #reviews, .toReviews{
+  background-color: orange;
+  color: white;
+  box-shadow: 0 5px #666666;
+}
+
 p.recipeAdd{
   margin-top: 25px;
 }
@@ -352,17 +367,7 @@ div.restFormTop{
   display:block;
  
 }
-/* #restaurantCard{
-  color: black;
-}
-#restaurants{
-  margin-top: 10px;
-} */
 
-/* div.restaurantsCards{
-  display: flex;
-  justify-content: space-evenly;
-} */
 button.add{
   background-color: green;
   color: yellow;
@@ -407,6 +412,15 @@ h3.locationsDisplay{
 #messages-tab{
   color: white;
 }
+
+/* Reviews */
+  div.reviewLocation{
+    background-color: orangered;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 
 /* Message Board */
 body.messagePage {

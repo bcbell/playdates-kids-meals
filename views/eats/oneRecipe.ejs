@@ -56,7 +56,7 @@
                         </table>
                          
                         
-                        <p class="lead">Reference Website: <%=eats.url%><th></th>  </p>
+                        <p class="lead">Reference Website: <%=eats.url%></p>
                   </div>
                 </div>
         </div>
@@ -68,13 +68,15 @@
               <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
                   <div class="container">
                     <h1 id="headerRecipes" class="display-4">The <%=eats.title%> Grocery Guide</h1>
-                    <h4 class="recipeDisplay">Did you get everything? </h4>
+                    <h4 class="recipeDisplay">Did you get everything listed?  </h4><button class="recipeBtns" onclick="myFunction()">Yes</button>
                     <p class="lead">
                      
                       
-                     <input type="checkbox" value="<%=eats.ingredients%>"><%=eats.ingredients%>
-                    
-                    
+              
+               <p id="strikethrough"><%=eats.ingredients%> </p>
+                
+          
+
                     </p>
                   </div>
                 </div>
@@ -85,7 +87,13 @@
     
 
 <%-include('../partials/footer')%>
-
+<script>
+  function myFunction() {
+    const str = "Ready to Cook";
+    const result = str.strike();
+    document.getElementById("strikethrough").innerHTML = result;
+  }
+  </script>
 <script>
     $('.dropdown-toggle').dropdown()
 </script>
