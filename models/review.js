@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const reviewSchema= new Schema({
   postedBy: String,
+  model: {type: String, enum: ['Restaurant', 'Recipe', 'Location']},
   avatar: String,
   rating: {type: String, enum: [' Would recommend', 'May visit again', 'Would not recommend']},
   content: String,

@@ -434,16 +434,28 @@ h3.locationsDisplay{
     margin-left: 200px;
     margin-right: 200px;
   }
+  #reviewsAll{
+    background-color: rgba(0, 0, 0, 0.655);
+  }
   #reviewForm{
     padding: 10px;
+    color: #38b6ff ;
+    
   }
   #reviewForm input, textarea{
     margin-top: 10px;
+
   } 
+  #reviewForm label, #reviewRating{
+    font-size: 30px;
+    color: #38b6ff ;
+
+  }
   .locationsDisplay{
     color: orange;
     background-color: rgba(0, 0, 0, 0.34);
   }
+  
 
 /* Message Board */
 body.messagePage {
@@ -455,7 +467,7 @@ body.messagePage {
   font-variant-caps: small-caps ;
   background-image: url(https://i.imgur.com/vFggTE0.png);
 }
-div.messageboard{
+div.messageboard, #reply{
   background-color: rgba(0, 0, 0, 0.634);
   border-radius: 25px;
   margin-bottom: 20px;
@@ -464,6 +476,7 @@ div.messageboard{
   margin-top: 20px;
   padding-bottom: 20px;
 }
+
 /* About Us Page */
 body.aboutPage {
   font-family: 'Poppins', sans-serif;

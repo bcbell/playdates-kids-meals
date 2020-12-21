@@ -4,6 +4,7 @@
 <% if (user) {%>
 
                     <h1 id="headerRecipes" class="display-4">Reviews </h1>
+                  <div id="reviewsAll">
                     <h4 class="locationsDisplay">Read about the experiences of other families at , wanna share your experience? Leave a review below: </h4>
               
                 <br>
@@ -11,6 +12,10 @@
                 <form action="/reviews " method="POST">
                   <label>Title</label>
                   <input name="title" type="text" placeholder="Title"><br>
+                  <label for="reviewRating">Review for: </label>
+                  <input type="radio" id="reviewRating" name="model" value="Restaurant">Restaurant  
+                  <input type="radio" id="reviewRating" name="model" value="Recipe">Recipe 
+                  <input type="radio" id="reviewRating" name="model" value="Location">Attraction <br>
                   <label>Location</label>
                   <input name="location" type="text" placeholder="Location Name..."><br>
                   <label>Review</label>
@@ -27,7 +32,7 @@
                   </form>
     
 </div> 
-                    
+         </div>           
                       <%if (reviews.length){%>
                    
                       <%reviews.forEach((review) =>{%> 

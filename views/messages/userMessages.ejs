@@ -17,7 +17,7 @@
    }
 
  </style>
- <% if (user) {%>
+
  <form id='replyboard' action="/messageboard/<%= message._id %>" method="POST">
    <div class="form-group">
      <input type="text" class="form-control" aria-describedby="message" name="message" placeholder="Enter reply...">
@@ -31,13 +31,14 @@
 <div id=send class='messageboard'>
     <div class="messager">
       <h3 class="reply"><%= message.postedBy %>'s Post</h3><a href="/playground/<%=user._id%>"><img id="avatarPhoto" width="40" src="<%= message.avatar %>" alt=""></a><%= message.postedBy %></div>
-    <div class='message'>
+    <div class='message' id=receive>
 <%= message.title %>-<%= message.createdAt.toLocaleString()%>
     </div><br>
    
  </div>
- <div id=reply>
+
  <% message.replies.forEach(reply => { %>
+   <div id=reply>
     <%= reply.postedBy %> <img id="avatarPhoto" width="25" src="<%= reply.avatar %>" alt=""> <h6><%= reply.message %> - <%= message.createdAt.toLocaleString()%></div><br>
  <% }) %>
 
@@ -47,16 +48,10 @@
 
  
 
-   <%} else{%>
+ 
    
 
-   <p class="mealsLogin"></p><%= user ? user.name : "friend" %>, login in below to access the messageboard!</p>
 
-   <div class="loginAccount">
-       <a id="google" class="googleAccount" href="/auth/google">
-          <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
-<%}%>
-</div>
 
 
 

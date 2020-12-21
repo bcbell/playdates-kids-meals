@@ -15,7 +15,7 @@
 
  </style>
  
-  <% if (user) {%>
+  
  <form action="/messageboard" method="POST">
     <div class="form-group">
       <input type="text" class="form-control" aria-describedby="message" name="title" placeholder="Enter message...">
@@ -36,17 +36,10 @@
 
 
 
-]
-   <%} else{%>
+
+
    
 
-   <p class="mealsLogin"></p><%= user ? user.name : "friend" %>, login in below to access the messageboard!</p>
-
-   <div class="loginAccount">
-       <a id="google" class="googleAccount" href="/auth/google">
-          <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
-<%}%>
-</div>
 
 
 
