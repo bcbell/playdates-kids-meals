@@ -3,76 +3,143 @@
  <h1>Ready for some <%= title %>, <%= user ? user.name : "friend" %>?</h1>
 
 
-
-<div class= "tabsEats">
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-      <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Restaurant & Meal Recommendations</a>
-    </li>
+ <style>
+ table {
+   border-spacing: 0;
+   width: 100%;
+   outline: rgba(255, 166, 0, 0.703) 10px solid;
+ }
  
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Kid-Friendly Meals</a>
-    </li>
-     <li class="nav-item" role="presentation">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Kids-Friendly Restaurants</a>
-    </li>
-  </ul>
-  
-  <div class="tab-content">
-    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-    <!-- Kid-Friendly Restaurant Display  -->
-    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div class="list-group">
-            <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 id="headerRecipes" class="display-4">The Restaurant Blackboard</h1>
-                      <h4 class="recipeDisplay">Interested in dining at these family-friendly restaurants?</h4>
-                  <p class="lead"><% rest.forEach(function(rest){ %> 
-                    <a href="restaurants/<%=rest._id%>" ><h2><%=rest.name%></h2></a>
-                  
-                      <%})%>   </p>
-                </div>
-              </div>
-    </div>
-</div>
-   <!-- Kid  Meals Recipe Display -->
-    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-        <div class="list-group">
-            <div id="recipeDisplay" class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 id="headerRecipes" class="display-4">The Blackboard of Meals</h1>
-                      <h4 class="recipeDisplay">Click below to check out kiddo approved recipes </h4>
-                  <p class="lead">
-                    <a href="/eats" ><button>Kid-Approved Recipes</button></a>
-                  
-                     </p>
-                </div>
-              </div>
-    </div>
-</div>
+ th {
+   cursor: pointer;
+   
+ }
+ 
+ th, td {
+   text-align: left;
+   padding: 20px;
+   color: white;
+   font-size: 20px;
+   font-weight: bold;
+ }
+ 
+ tr:nth-child(even) {
+   background-color: #d1001cb0;
+ }
+ 
+ </style>
 
-<!-- To add a recipe or restaurant -->
-    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-           <% if (user) {%>
-         </h4><h3><p> Will you be adding a kid-friendly restaurant or recipe? </p></h3><br>
-            <a href="/restaurants/dining"><button class="add">Add Restaurant</button></a><a href="eats/recipes"><button class="add">Add Recipe</button></a><br>
 
-            <%} else{%>
-            <span ><h4>Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</span>
+ 
+ <p><strong>Click the headers to sort</strong></p>
+ <p>The first time you click, the sorting direction is ascending (A to Z).</p>
+ <p>Click again, and the sorting direction will be descending (Z to A):</p>
+ 
+ <table id="myTable">
+   <tr>
+    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+     <th onclick="sortTable(0)">Restaurant</th>
+     <th onclick="sortTable(1)">Area </th>
+     <th onclick="sortTable(2)">State</th>
+     <th onclick="sortTable(3)">Cuisine Speciality</th>
+     <th onclick="sortTable(4)">Features
+    </th>
+     <th onclick="sortTable(5)">Service</th>
+   </tr>
+ 
+   <% rest.forEach(function(rest){ %> 
+    <tr> 
+      <td><a href="restaurants/<%=rest._id%>"><%=rest.name%></a></td>
+      <td><%=rest.locality%></td>
+      <td><%=rest.state%></td> 
+      <td><%=rest.cuisines%></td>
+      <td><%=rest.speciality%></td>
+      <td><%=rest.features%></td>
+      <td><%=rest.service%></td>
+   
+    </tr>
+      
+      <%})%>     
+     
+ </table>
+ <br><br>
 
-            <p class="mealsLogin"></p><%= user ? user.name : "friend" %>, login in below to a add your recommendation to the list!</p>
+ <span ><h4 class="addRecommendation">Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</span>
+  <% if (user) {%>
+</h4><h3><p> Add a recommendation </p></h3><br>
+   <a href="/restaurants/dining"><button class="add">Add Restaurant</button></a>
 
-            <div class="loginAccount">
-                <a id="google" class="googleAccount" href="/auth/google">
-                   <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
-         <%}%>
-        </div>
-    </div>
-  </div>
+   <%} else{%>
+   
+
+   <p class="mealsLogin"></p><%= user ? user.name : "friend" %>, login in below to a add your recommendation to the list!</p>
+
+   <div class="loginAccount">
+       <a id="google" class="googleAccount" href="/auth/google">
+          <img height= 200 width= 200 id= "login" class= "googleAccount" src="https://i.imgur.com/pFhNdoN.png"></a>
+<%}%>
 </div>
 
 <%-include('../partials/footer')%>
+ 
+ <script>
+ function sortTable(n) {
+   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+   table = document.getElementById("myTable");
+   switching = true;
+   //Set the sorting direction to ascending:
+   dir = "asc"; 
+   /*Make a loop that will continue until
+   no switching has been done:*/
+   while (switching) {
+     //start by saying: no switching is done:
+     switching = false;
+     rows = table.rows;
+     /*Loop through all table rows (except the
+     first, which contains table headers):*/
+     for (i = 1; i < (rows.length - 1); i++) {
+       //start by saying there should be no switching:
+       shouldSwitch = false;
+       /*Get the two elements you want to compare,
+       one from current row and one from the next:*/
+       x = rows[i].getElementsByTagName("TD")[n];
+       y = rows[i + 1].getElementsByTagName("TD")[n];
+       /*check if the two rows should switch place,
+       based on the direction, asc or desc:*/
+       if (dir == "asc") {
+         if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+           //if so, mark as a switch and break the loop:
+           shouldSwitch= true;
+           break;
+         }
+       } else if (dir == "desc") {
+         if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+           //if so, mark as a switch and break the loop:
+           shouldSwitch = true;
+           break;
+         }
+       }
+     }
+     if (shouldSwitch) {
+       /*If a switch has been marked, make the switch
+       and mark that a switch has been done:*/
+       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+       switching = true;
+       //Each time a switch is done, increase this count by 1:
+       switchcount ++;      
+     } else {
+       /*If no switching has been done AND the direction is "asc",
+       set the direction to "desc" and run the while loop again.*/
+       if (switchcount == 0 && dir == "asc") {
+         dir = "desc";
+         switching = true;
+       }
+     }
+   }
+ }
+ </script>
+
+
 
 <script>
     $('.dropdown-toggle').dropdown()
