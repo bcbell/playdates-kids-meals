@@ -89,7 +89,10 @@ __Premlinary Planning__
    - [x ] Logo (Left)
    - [x ] Links- Home, Play & Explore (Attractions), Eat (Food/Restaurants), Experience (Events- goal), Playroom (Board) (Left)
    - [x ]  User Name, Message Bubble (chat icon), Notifications Bubble (notifications icon) Recommendations(reviews) (Right)
-   
+
+__Trello__
+
+Trello Board : https://trello.com/b/ff8KoGof/playdates-kids-meals
 
 __Wireframe__
 
