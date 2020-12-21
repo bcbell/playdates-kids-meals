@@ -115,6 +115,7 @@ body.nonsignIn {
 }
 div.card-deck button{
   font-variant-caps: small-caps ;
+  margin-bottom: 10px;
 }
 /* Error Page */
 body.error {
