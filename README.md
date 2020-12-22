@@ -126,7 +126,7 @@ __Future Enhancements__
 __List of Technologies Used:__
 - MongoDB
 - Node.js
-- ExpressJS
+- Express.js
 - HTML
 - CSS
 - JavaScript
