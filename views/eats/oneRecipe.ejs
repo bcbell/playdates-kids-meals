@@ -6,17 +6,20 @@
  
 <div class= "tabsEats">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Recipe: <%=eats.title%> </a>
-      </li>
       <li class="nav-item" role="presentation">
         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true"><%=eats.title%> Grocery Guide</a>
       </li> 
-    
+         <li class="nav-item" role="presentation">
+        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Recipe: <%=eats.title%> </a>
+      </li>
     </ul>
     
     <div class="tab-content">
-      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
+      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div></div> 
       <!-- Kid  Meals Recipe Display -->
       <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
           <div class="list-group">
@@ -24,23 +27,34 @@
                   <div class="container">
                     <h1 id="headerRecipes" class="display-4">Recipe: <%=eats.title%> (<%=eats.meal%>)</h1>
                         <h4 class="recipeDisplay"><%=eats.descripton%></h4>
+                       <img height="400" width="400" src="<%=eats.image%>">
                         <table id="recipeDish">
                           <thead>
                             <tr>
                               <th>Dish Category: <%=eats.dish%></th>
+                              <td></td>
+                              <td></td>
                               <th>Meal Type: <%=eats.meal%></th>
+                              <td></td>
+                              <td></td>
                               <th >Cuisine Type: <%=eats.cuisineType%></th>
                               </tr>
                               <!-- <tr>
                                 <th>Cuisine Type: <%=eats.cuisineType%></th>
                               </tr> -->
                               <tr>
-                                <th>Food Allergies: <%=eats.health%></th>
+                                <th>Food Allergies: <%=eats.health%></th> 
+                                <td></td>
+                                <td></td>
                                 <th>Dietary Plan: <%=eats.diet%></th>
                               </tr>
                               <tr>
                                 <th>Prep: <%=eats.prep%></th>
+                                <td></td>
+                                <td></td>
                                 <th>Cook Time: <%=eats.cookTime%></th>
+                                <td></td>
+                                <td></td>
                                 <th> Serves : <%=eats.serves%></th>
                               </tr>
                               <tr>
@@ -48,12 +62,13 @@
                               </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td>Directions: <%=eats.recipe%> </td>
-                            </tr>
+                          </table>
+                           
+                              <p>Directions:</p><p><%=eats.recipe%> </p> 
+                          
                             
-                          </tbody>
-                        </table>
+                
+                        
                          
                         
                        <p class="lead">Reference Website: <a href="<%=eats.url%>"><%=eats.url%></a> </p>
@@ -87,6 +102,7 @@
     
 
 <%-include('../partials/footer')%>
+
 <script>
   function myFunction() {
     const str = "Ready to Cook";

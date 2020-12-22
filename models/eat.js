@@ -29,6 +29,7 @@ const eatSchema =new Schema({
     cookTime: String,
     serves: Number,
     descripton: String,
+    image:String,
     postedBy: String,
     user: [{type: Schema.Types.ObjectID, ref:'User'}],
 },{

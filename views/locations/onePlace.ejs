@@ -13,7 +13,11 @@
     </ul>
     
     <div class="tab-content">
-      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div> 
+      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div></div> 
 
              
  <!-- Location Details -->
@@ -29,8 +33,17 @@
 
             <h4 class="recipeDisplay">Attraction Type: <%=location.locationType%></h4>
 
-            <div><h3 class="locationsDisplay">This location is appropriate for the following age groups:</h3><h4 class="recipeDisplay"> <%=location.age%></h4></div>
+            <p>
+              <h4 class="recipeDisplay"><a href="<%=location.placeurl%>"><%=location.placeurl%></a></h4></p>
+
+            <div>
+              <h3 class="locationsDisplay">This location is appropriate for the following age groups:</h3><h4 class="recipeDisplay"> <%=location.age%></h4></div>
             <br>
+            <div>
+              <h3>Attraction Highlights</h3>
+              <%=location.highlights%>
+            </div>
+            
                     
 
 

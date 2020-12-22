@@ -11,7 +11,11 @@
           </div>
           <div class="mb-4">
             <label for="exampleFormControlInput1" class="form-label">Restaurant Website</label>
-            <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="http://websitehere.com">
+            <input type="url" name="url" class="form-control" id="exampleFormControlInput1" placeholder="http://websitehere.com">
+          </div>
+          <div class="col-50">
+            <label for="inputAddress2" class="form-label">Closest Metro City</label>
+            <input type="text" name="locality" class="form-control" id="inputAddress2"  placeholder="Atlanta, DC, NYC...">
           </div>
         <div class="col-50">
           <label for="inputAddress" class="form-label">Address</label>
@@ -129,8 +133,12 @@
         <div class="col-12">
           <button type="submit" class="btn btn-primary" id="restBtn">Submit</button>
         </div>
+        
+
       </form>
-      <span ><h4 class="addRecommendation">Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</span>
+   
+
+      
        
       
          <%} else{%>
