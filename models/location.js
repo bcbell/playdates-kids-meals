@@ -56,7 +56,6 @@ const locationSchema = new Schema(
         highlights: String,
         reviews: [reviewSchema],
         user: [{type: Schema.Types.ObjectId, ref:'User'}],
-        restaurants:  [{type: Schema.Types.ObjectId, ref: 'Rest'}],
        
       },
       {

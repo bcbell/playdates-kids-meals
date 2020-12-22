@@ -9,12 +9,12 @@ __App Overview__
 
 For security, the application requires users to login into the application through Google OAuth to access the  features. 
 
+A non-logged in user is able to access a list of kid-friendly attractions, restaurants, and recipes. However, because this app is design for parents and families with children, security is of the up-most importance and users are required to login to access features such as the messageboard, playground of users, recommendations and reviews. 
+
 __DEMO__
 
 For demo, visit http://kidsmeals.herokuapp.com/
 
-
- 
 
 __Views__
 1. HTML Boilerplate
@@ -121,11 +121,12 @@ __Future Enhancements__
 3. Contact Us Form
 4. Search functionality
 5. Include image upload in forms
-6. Images
 
    
-
 __List of Technologies Used:__
+- MongoDB
+- Node.js
+- ExpressJS
 - HTML
 - CSS
 - JavaScript

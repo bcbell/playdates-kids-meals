@@ -1,6 +1,10 @@
 <%-include('../partials/header')%>
 <body class="locationsPage">
-    <h1 class="placeLogin">Ready to add a great <%= title %>, <%= user ? user.name : "friend" %>?</h1>
+  
+  <div class="recForm">
+
+  
+  <h1 class="placeLogin">Ready to add a great <%= title %>, <%= user ? user.name : "friend" %>?</h1>
 
      <% if (user) {%>    
         <form class="recipeForm" action="/explorations" method="POST">
@@ -169,7 +173,7 @@
           <%}%>
           </div>
           
-
+</div>
 
 
 

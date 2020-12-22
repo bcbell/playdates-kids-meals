@@ -406,7 +406,9 @@ body.locationsPage {
   color: darkorange;
   background-color: rgba(0, 128, 0, 0.744);
 }
-
+div.recForm{
+  background-color: rgba(0, 128, 0, 0.593);
+}
 .tabsLocation{
   margin-top: 50px;
   font-family: 'Architects Daughter', cursive;

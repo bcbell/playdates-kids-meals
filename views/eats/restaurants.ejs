@@ -8,10 +8,12 @@
    border-spacing: 0;
    width: 100%;
    outline: rgba(255, 166, 0, 0.703) 10px solid;
+   background-color: rgba(0, 0, 0, 0.62);
  }
  
  th {
    cursor: pointer;
+   border-bottom: white 3px solid;
    
  }
  
@@ -22,10 +24,10 @@
    font-size: 20px;
    font-weight: bold;
  }
- 
- tr:nth-child(even) {
+ /* To highlight every other line on table  */
+ /* tr:nth-child(even) {
    background-color: #d1001cb0;
- }
+ } */
  
  </style>
 
@@ -65,9 +67,9 @@
  </table>
  <br><br>
 
- <span ><h4 class="addRecommendation">Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</span>
+ <span ><h4 class="addRecommendation">Thank you for entrusting us with your recommendation and allowing us to continue our efforts to create a resource for families with kids!</h4></span>
   <% if (user) {%>
-</h4><h3><p> Add a recommendation </p></h3><br>
+<h3><p> Add a restaurant recommendation? </p></h3><br>
    <a href="/restaurants/dining"><button class="add">Add Restaurant</button></a>
 
    <%} else{%>

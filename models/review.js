@@ -10,7 +10,7 @@ const reviewSchema= new Schema({
   title: String,
   place: String,
   location: String,
-  
+ 
 },{
   timestamps: true
 })
