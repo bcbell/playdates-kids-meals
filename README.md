@@ -3,7 +3,7 @@
 
 __Playdates & Kids Meals__
 
-This project is designed for families with kids. As a mother of 2 toddlers, I wanted to create an application that would be beneficial to parents and caregivers looking to kid-friendly meals, attractions, and restaurants. Offering families a unique varity of resources from entertainment and meal time.  
+This project is designed for families with kids. As a mother of 2 toddlers, I wanted to create an application that would be beneficial to parents and caregivers looking to kid-friendly meals, attractions, and restaurants. Offering families a unique variety of resources from entertainment and meal time.  
 
 __App Overview__
 
