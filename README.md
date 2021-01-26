@@ -127,7 +127,6 @@ __List of Technologies Used:__
 - MongoDB
 - Node.js
 - Express.js
-- Mongoose Mongo DB
 - EJS
 - HTML
 - CSS
